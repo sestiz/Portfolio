@@ -1,0 +1,308 @@
+//-----WEBSITE CONSTANTS-----
+$primaryColor: #263143;
+$secondaryColor: #234A7F;
+$primaryFont: quicksand,arial,sans-serif;
+
+$mobile: 0px;
+$tablet: 768px;
+$desktop: 992px;
+
+//---------------------
+
+$menuBackgroundColor: $primaryColor;
+$menuBackgroundSize: 150px;
+
+$menuFontSize:1.3em;
+$menuFontColor:#FFF;
+$menuFontHoverColor:#93C1FF;
+
+$titleSize:4.3em;
+$subtitleSize:1.5em;
+
+$titleColor: #00b7ea;
+$subtitleColor: #007FA2;
+$textColor: #007FA2;
+$buttonFontSize:1em;
+
+$fadeInTime: 0.7s;
+
+
+
+// Custom, iPhone Retina
+@media only screen and (min-width : $mobile){
+  .header {
+
+  }
+}
+
+// Extra Small Devices, Phones
+@media only screen and (min-width : $tablet) {
+
+}
+
+// Small Devices, Tablets
+@media only screen and (min-width : $desktop) {
+
+  body,html{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    text-rendering: optimizeLegibility;
+  }
+
+  .header {
+    width: $menuBackgroundSize;
+    height:100%;
+    //background: $menuBackgroundColor;
+    background: -moz-linear-gradient(top,  rgba(0,183,234,1) 0%, rgba(0,229,160,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,183,234,1) 0%,rgba(0,229,160,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,183,234,1) 0%,rgba(0,229,160,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8000b7ea', endColorstr='#8000e5a0',GradientType=0 ); /* IE6-9 */
+    font-family:$primaryFont;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index:7;
+
+
+    .menu{
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      position: relative;
+      top:50%;
+      overflow: hidden;
+
+      a{
+        display:block;
+        font-size:$menuFontSize;
+        text-align:center;
+        margin:30px auto;
+        color:$menuFontColor;
+        text-decoration: none;
+        transition: color ease-in-out 200ms;
+
+        p{
+          line-height:1.7em;
+        }
+      }
+      $delay:0.5;
+      $delayOffset:0.2;
+      .first{
+        -moz-animation-delay:$delay + s;
+        -webkit-animation-delay:$delay + s;
+        animation-delay:$delay + s;
+      }
+      .second{
+        -moz-animation-delay:$delay + $delayOffset + s;
+        -webkit-animation-delay:$delay + $delayOffset + s;
+        animation-delay:$delay + $delayOffset + s;
+      }
+      .third{
+        -moz-animation-delay:$delay + $delayOffset + $delayOffset + s;
+        -webkit-animation-delay:$delay + $delayOffset + $delayOffset + s;
+        animation-delay: $delay + $delayOffset + $delayOffset + s;
+      }
+      .fourth{
+        -moz-animation-delay:$delay + $delayOffset + $delayOffset + $delayOffset + s;
+        -webkit-animation-delay:$delay + $delayOffset + $delayOffset + $delayOffset + s;
+        animation-delay: $delay + $delayOffset + $delayOffset + $delayOffset + s;
+      }
+    }
+    }
+
+  .container {
+    width:100%;
+    height:100%;
+    background:#E0FFFE;
+    display: block;
+    overflow:hidden;
+
+    .content{
+      padding-left: $menuBackgroundSize;width: 100%;
+      height: 100%;
+      display: block;
+      box-sizing: border-box;
+
+      #About{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        font-family: $primaryFont;
+
+        .wrapper{
+          width:78%;
+          max-width:960px;
+          margin:0 auto;
+          padding-top: 9%;
+        }
+        h1{
+          color: $titleColor;
+          font-size: $titleSize;
+          opacity:0;
+          -webkit-animation:fadeIn $fadeInTime ease-in 1s forwards;
+          -o-animation:fadeIn $fadeInTime ease-in 1s forwards;
+          animation:fadeIn $fadeInTime ease-in 1s forwards;
+        }
+        h2{
+          margin-top: 0.63em;
+          color: $subtitleColor;
+          font-size: $subtitleSize;
+          opacity:0;
+          -webkit-animation:fadeIn $fadeInTime ease-in 1.5s forwards;
+          -o-animation:fadeIn $fadeInTime ease-in 1.5s forwards;
+          animation:fadeIn $fadeInTime ease-in 1.5s forwards;
+        }
+        p{
+          margin-top:0.83em;
+          color:$textColor;
+
+          opacity:0;
+        }
+        .description1{
+          -webkit-animation:fadeIn $fadeInTime ease-in 2s forwards;
+          -o-animation:fadeIn $fadeInTime ease-in 2s forwards;
+          animation:fadeIn $fadeInTime ease-in 2s forwards;
+        }
+        .description2{
+          -webkit-animation:fadeIn $fadeInTime ease-in 2s forwards;
+          -o-animation:fadeIn $fadeInTime ease-in 2s forwards;
+          animation:fadeIn $fadeInTime ease-in 2s forwards;
+        }
+        .description3{
+          -webkit-animation:fadeIn $fadeInTime ease-in 2s forwards;
+          -o-animation:fadeIn $fadeInTime ease-in 2s forwards;
+          animation:fadeIn $fadeInTime ease-in 2s forwards;
+        }
+        .description4{
+          -webkit-animation:fadeIn $fadeInTime ease-in 2s forwards;
+          -o-animation:fadeIn $fadeInTime ease-in 2s forwards;
+          animation:fadeIn $fadeInTime ease-in 2s forwards;
+        }
+        .bouton{
+          border: 1px solid $textColor;
+          border-radius: 5px;
+          background: none;
+          padding: 10px 19px;
+          font-family: $primaryFont;
+          font-size: $buttonFontSize;
+          margin: 30px auto;
+          color: $textColor;
+          display: inline-block;
+          text-decoration:none;
+          position:relative;
+          overflow:hidden;
+          z-index:5;
+
+          opacity:0;
+          -webkit-animation:fadeIn $fadeInTime ease-in 2.5s forwards;
+          -o-animation:fadeIn $fadeInTime ease-in 2.5s forwards;
+          animation:fadeIn $fadeInTime ease-in 2.5s forwards;
+
+            &:before{
+              background: #007FA2;
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              transition: all ease 0.3s;
+              -webkit-transform: translate3d(-20px,0px,0px) rotateZ(45deg);
+              transform: translate3d(0px,100%,0px) rotateZ(45deg);
+              transform-origin:top left;
+              z-index:1;
+            }
+            &:hover{
+              color:#FFF;
+
+              &:before{
+                -webkit-transform: translate3d(0px,0px,0px) rotateZ(0deg);
+                transform: translate3d(0px,0px,0px) rotateZ(0deg);
+              }
+            }
+        }
+      }
+
+      #Portfolio{
+        width: 100%;
+        min-height: 100%;
+        position: relative;
+        font-family: $primaryFont;
+        background:url(../images/desk.jpg) repeat;
+        background-attachment:fixed;
+
+        .wrapper{
+          width:78%;
+          max-width:960px;
+          margin:0 auto;
+          padding-top: 9%;
+        }
+      }
+    }
+  }
+
+.slide{
+  width:100%;
+  height:100%;
+}
+  @keyframes rotateFall {
+    0%      { transform: rotateZ(0deg); }
+    20%     { transform: rotateZ(10deg); animation-timing-function: ease-out; }
+    40%     { transform: rotateZ(17deg); }
+    60%     { transform: rotateZ(16deg); }
+    100%    { transform: translateY(100%) rotateZ(17deg); }
+  }
+
+  /* slide in from the bottom */
+  @keyframes slideOutLeft {
+    to      { transform: translateX(-100%); }
+  }
+
+  /* rotate out newspaper */
+  @keyframes rotateOutNewspaper {
+    to      { transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
+  }
+
+  /* entering animations --------------------------------------- */
+  /* fadein */
+  @keyframes fadeIn {
+    from    { opacity: 0; }
+    to      { opacity: 1; }
+  }
+
+  @keyframes fadeOut {
+    from    { opacity: 1; }
+    to      { opacity: 0; }
+  }
+
+  /* slide in from the right */
+  @keyframes slideInRight {
+    from    { transform:translateX(100%); }
+    to      { transform: translateX(0); }
+  }
+
+  /* slide in from the bottom */
+  @keyframes slideInUp {
+    from    { transform:translateY(100%); }
+    to      { transform: translateY(0); }
+  }
+
+  .ng-enter       { z-index: 8888; }
+  .ng-leave       { z-index: 9999; }
+
+  /* page specific animations ------------------------ */
+
+  /* home -------------------------- */
+  .aboutanim.ng-enter         { animation: fadeIn 0.5s both ease-in; animation-delay: 0.6s; }
+  .aboutanim.ng-leave         { animation: fadeOut 0.2s both ease-in; animation-delay: 0s; }
+
+  /* about ------------------------ */
+  .portfolioanim.ng-enter        { animation:slideInRight 0.5s both ease-in; animation-delay:0.3s; }
+  .portfolioanim.ng-leave        { animation:slideOutLeft 0.5s both ease-in; }
+
+  /* contact ---------------------- */
+  .contactanim.ng-leave      { transform-origin: 50% 50%; animation: rotateOutNewspaper .5s both ease-in; }
+  .contactanim.ng-enter      { animation:slideInUp 0.5s both ease-in; }
+}
