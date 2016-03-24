@@ -28,6 +28,51 @@ app.controller('mainController', function($scope){
 
 app.controller('portfolioController', function($scope){
     $scope.animateClass = 'portfolioanim';
+
+    $scope.getTemplate = function(section) {
+        return 'views/projet.html';
+    }
+
+    $scope.projets = [
+        {
+            titre: 'Naughty Factory',
+            url: 'naughtyfactory.com',
+            tags: [
+                { nom:'Bootstrap'},
+                { nom:'Javascript'}
+            ],
+            imagesUrl:[
+                { url:"images/portfolio/naughtyfactory-desktop.jpg", class:"desktop"},
+                { url:"images/portfolio/naughtyfactory-tablet.jpg", class:"tablet"},
+                { url:"images/portfolio/naughtyfactory-mobile.jpg", class:"mobile"}
+            ],
+            overdescription:"Site à haut traffic créé avec la compagnie M2J Technologies.",
+            description:"Travaillant conjointement avec un développeur ASP.NET," +
+            "j'ai intégré le design d'un designer dans un site fait à partir de rien. " +
+            "J'ai programmé la structure HTML/CSS modulable ( en template )." +
+            "Programmation d'intéraction server-client en AJAX et JQuery" +
+            "Utilisation  du Framework UI Kendo UI®"
+        },
+        {
+            titre: 'Production et Distribution Compagnie X',
+            url: 'bellafd.com',
+            tags: [
+                { nom:'Wordpress'},
+                { nom:'Design'}
+            ],
+            imagesUrl:[
+                { url:"images/portfolio/naughtyfactory-desktop.jpg", class:"desktop"},
+                { url:"images/portfolio/naughtyfactory-tablet.jpg", class:"tablet"},
+                { url:"images/portfolio/naughtyfactory-mobile.jpg", class:"mobile"}
+            ],
+            overdescription:"Site web Wordpress ciblant les gens du domaine de la beauté",
+            description:"Création du design sur Wordpress," +
+            "Programmation de"
+        },
+        {
+
+        }
+    ]
 });
 
 app.controller('contactController', function($scope){

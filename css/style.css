@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'quicksand';
+  src: url("../fonts/Quicksand-Regular.otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'quicksandBold';
+  src: url("../fonts/Quicksand-Bold.otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'quicksandLight';
+  src: url("../fonts/Quicksand-Light.otf");
+  font-weight: normal;
+  font-style: normal; }
 @media only screen and (min-width: 992px) {
   body, html {
     width: 100%;
@@ -79,6 +94,7 @@
           margin: 0 auto;
           padding-top: 9%; }
         .container .content #About h1 {
+          font-family: quicksandLight;
           color: #00b7ea;
           font-size: 4.3em;
           opacity: 0;
@@ -86,9 +102,11 @@
           -o-animation: fadeIn 0.7s ease-in 1s forwards;
           animation: fadeIn 0.7s ease-in 1s forwards; }
         .container .content #About h2 {
+          font-family: quicksandLight;
           margin-top: 0.63em;
+          margin-bottom: 1.3em;
           color: #007FA2;
-          font-size: 1.5em;
+          font-size: 1.6em;
           opacity: 0;
           -webkit-animation: fadeIn 0.7s ease-in 1.5s forwards;
           -o-animation: fadeIn 0.7s ease-in 1.5s forwards;
@@ -97,22 +115,24 @@
           margin-top: 0.83em;
           color: #007FA2;
           opacity: 0; }
+          .container .content #About p strong {
+            font-family: quicksandBold; }
         .container .content #About .description1 {
           -webkit-animation: fadeIn 0.7s ease-in 2s forwards;
           -o-animation: fadeIn 0.7s ease-in 2s forwards;
           animation: fadeIn 0.7s ease-in 2s forwards; }
         .container .content #About .description2 {
-          -webkit-animation: fadeIn 0.7s ease-in 2s forwards;
-          -o-animation: fadeIn 0.7s ease-in 2s forwards;
-          animation: fadeIn 0.7s ease-in 2s forwards; }
+          -webkit-animation: fadeIn 0.7s ease-in 2.2s forwards;
+          -o-animation: fadeIn 0.7s ease-in 2.2s forwards;
+          animation: fadeIn 0.7s ease-in 2.2s forwards; }
         .container .content #About .description3 {
-          -webkit-animation: fadeIn 0.7s ease-in 2s forwards;
-          -o-animation: fadeIn 0.7s ease-in 2s forwards;
-          animation: fadeIn 0.7s ease-in 2s forwards; }
+          -webkit-animation: fadeIn 0.7s ease-in 2.4s forwards;
+          -o-animation: fadeIn 0.7s ease-in 2.4s forwards;
+          animation: fadeIn 0.7s ease-in 2.4s forwards; }
         .container .content #About .description4 {
-          -webkit-animation: fadeIn 0.7s ease-in 2s forwards;
-          -o-animation: fadeIn 0.7s ease-in 2s forwards;
-          animation: fadeIn 0.7s ease-in 2s forwards; }
+          -webkit-animation: fadeIn 0.7s ease-in 2.6s forwards;
+          -o-animation: fadeIn 0.7s ease-in 2.6s forwards;
+          animation: fadeIn 0.7s ease-in 2.6s forwards; }
         .container .content #About .bouton {
           border: 1px solid #007FA2;
           border-radius: 5px;
@@ -128,9 +148,12 @@
           overflow: hidden;
           z-index: 5;
           opacity: 0;
-          -webkit-animation: fadeIn 0.7s ease-in 2.5s forwards;
-          -o-animation: fadeIn 0.7s ease-in 2.5s forwards;
-          animation: fadeIn 0.7s ease-in 2.5s forwards; }
+          -webkit-animation: fadeIn 0.7s ease-in 3s forwards;
+          -o-animation: fadeIn 0.7s ease-in 3s forwards;
+          animation: fadeIn 0.7s ease-in 3s forwards; }
+          .container .content #About .bouton span {
+            transition: all ease 0.3s;
+            animation-delay: 1s; }
           .container .content #About .bouton:before {
             background: #007FA2;
             content: "";
@@ -143,7 +166,7 @@
             -webkit-transform: translate3d(-20px, 0px, 0px) rotateZ(45deg);
             transform: translate3d(0px, 100%, 0px) rotateZ(45deg);
             transform-origin: top left;
-            z-index: 1; }
+            z-index: -1; }
           .container .content #About .bouton:hover {
             color: #FFF; }
             .container .content #About .bouton:hover:before {
@@ -154,13 +177,90 @@
         min-height: 100%;
         position: relative;
         font-family: quicksand, arial, sans-serif;
-        background: url(../images/desk.jpg) repeat;
-        background-attachment: fixed; }
+        overflow: auto; }
         .container .content #Portfolio .wrapper {
           width: 78%;
           max-width: 960px;
           margin: 0 auto;
           padding-top: 9%; }
+        .container .content #Portfolio h1 {
+          font-family: quicksandLight;
+          color: #00b7ea;
+          font-size: 4.3em;
+          opacity: 0;
+          -webkit-animation: fadeIn 0.7s ease-in 1s forwards;
+          -o-animation: fadeIn 0.7s ease-in 1s forwards;
+          animation: fadeIn 0.7s ease-in 1s forwards; }
+        .container .content #Portfolio h2 {
+          font-family: quicksandLight;
+          margin-top: 0.63em;
+          margin-bottom: 1.3em;
+          color: #007FA2;
+          font-size: 1.6em;
+          opacity: 0;
+          -webkit-animation: fadeIn 0.7s ease-in 1.5s forwards;
+          -o-animation: fadeIn 0.7s ease-in 1.5s forwards;
+          animation: fadeIn 0.7s ease-in 1.5s forwards; }
+        .container .content #Portfolio p {
+          margin-top: 0.83em;
+          color: #007FA2;
+          opacity: 1; }
+          .container .content #Portfolio p strong {
+            font-family: quicksandBold; }
+        .container .content #Portfolio article {
+          border: 1px solid #000; }
+          .container .content #Portfolio article img {
+            transform: rotateY(-30deg) rotateX(10deg);
+            transform-origin: left bottom;
+            position: absolute;
+            display: block;
+            -webkit-box-shadow: 1px 0px 0 #000, 0 0 30px rgba(0, 95, 99, 0.2);
+            box-shadow: 1px 0px 0 #000, 0 0 30px rgba(0, 95, 99, 0.2); }
+            .container .content #Portfolio article img.desktop {
+              width: 30em; }
+            .container .content #Portfolio article img.tablet {
+              width: 15em; }
+            .container .content #Portfolio article img.mobile {
+              width: 7em; }
+        .container .content #Portfolio .bouton {
+          border: 1px solid #007FA2;
+          border-radius: 5px;
+          background: none;
+          padding: 10px 19px;
+          font-family: quicksand, arial, sans-serif;
+          font-size: 1em;
+          margin: 30px auto;
+          color: #007FA2;
+          display: inline-block;
+          text-decoration: none;
+          position: relative;
+          overflow: hidden;
+          z-index: 5;
+          opacity: 0;
+          -webkit-animation: fadeIn 0.7s ease-in 3s forwards;
+          -o-animation: fadeIn 0.7s ease-in 3s forwards;
+          animation: fadeIn 0.7s ease-in 3s forwards; }
+          .container .content #Portfolio .bouton span {
+            transition: all ease 0.3s;
+            animation-delay: 1s; }
+          .container .content #Portfolio .bouton:before {
+            background: #007FA2;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: all ease 0.3s;
+            -webkit-transform: translate3d(-20px, 0px, 0px) rotateZ(45deg);
+            transform: translate3d(0px, 100%, 0px) rotateZ(45deg);
+            transform-origin: top left;
+            z-index: -1; }
+          .container .content #Portfolio .bouton:hover {
+            color: #FFF; }
+            .container .content #Portfolio .bouton:hover:before {
+              -webkit-transform: translate3d(0px, 0px, 0px) rotateZ(0deg);
+              transform: translate3d(0px, 0px, 0px) rotateZ(0deg); }
 
   .slide {
     width: 100%;

@@ -1,14 +1,11 @@
 <section class="slide" id="Portfolio" ng-controller="portfolioController">
     <div class="wrapper">
-        <h1 class="salut">Portfolio,</h1>
-        <h2 class="qui">Je suis un développeur front-end qui
-            est un enthousiaste du web</h2>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu eros sit amet orci vestibulum fringilla. Fusce sed suscipit lacus.
-            Aenean volutpat congue velit eleifend hendrerit. Vestibulum condimentum libero eget dui suscipit varius. Donec pulvinar sapien
-            ut feugiat accumsan. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam scelerisque
-            tristique nibh, vel lobortis metus vulputate hendrerit. Etiam feugiat massa vitae mi vehicula fringilla. Class aptent taciti sociosqu
-            ad litora torquent per conubia nostra, per inceptos himenaeos. Proin non aliquet neque, vitae vulputate dolor. Fusce eu feugiat felis.
-            Maecenas nec sollicitudin quam.</p>
-        <a href="#" class="bouton">Voir le portfolio</a>
+        <h1 class="salut">Portfolio</h1>
+        <h2 class="qui">Voici les projets sur lesquels j'ai travaillé</h2>
+
+        <article ng-repeat="projet in projets" ng-include="getTemplate()">
+            <!-- Les projets du portfolio apparaissent ici -->
+        </article>
+        <a href="#" class="bouton">Me contacter</a>
     </div>
 </section>
