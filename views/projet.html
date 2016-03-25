@@ -1,12 +1,15 @@
 <div ng-controller="portfolioController">
-    <div class="thumbs" ng-repeat="image in projet.imagesUrl">
-        <img class="{{ image.class }}" src="{{ image.url }}" />
+    <div class="thumbs">
+        <img class="{{ image.class }}" src="{{ image.url }}" ng-repeat="image in projet.imagesUrl" />
+        <div style="clear: both"></div>
     </div>
     <h3>{{ projet.titre }}</h3>
-    <p class="technologies" ng-repeat="tag in projet.tags">
-        <span>{{ tag.nom }}</span>
+    <h4>{{ projet.overdescription }}</h4>
+    <p class="technologies">
+        <span ng-repeat="tag in projet.tags">{{ tag.nom }}</span>
     </p>
-    <p>
+    <p class="description">
         {{ projet.description }}
     </p>
+    <div style="clear: both"></div>
 </div>

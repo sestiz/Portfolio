@@ -39,7 +39,11 @@ app.controller('portfolioController', function($scope){
             url: 'naughtyfactory.com',
             tags: [
                 { nom:'Bootstrap'},
-                { nom:'Javascript'}
+                { nom:'Javascript'},
+                { nom:'Responsive Design'},
+                { nom:'AJAX'},
+                { nom:'Razor'},
+                { nom:'ASP.net'}
             ],
             imagesUrl:[
                 { url:"images/portfolio/naughtyfactory-desktop.jpg", class:"desktop"},
@@ -58,7 +62,8 @@ app.controller('portfolioController', function($scope){
             url: 'bellafd.com',
             tags: [
                 { nom:'Wordpress'},
-                { nom:'Design'}
+                { nom:'Design'},
+                { nom:'Responsive Design'}
             ],
             imagesUrl:[
                 { url:"images/portfolio/naughtyfactory-desktop.jpg", class:"desktop"},
@@ -67,10 +72,28 @@ app.controller('portfolioController', function($scope){
             ],
             overdescription:"Site web Wordpress ciblant les gens du domaine de la beauté",
             description:"Création du design sur Wordpress," +
-            "Programmation de"
+            "Programmation des widgets"
         },
         {
-
+            titre: 'Sondage Conseil Québecois du Commerce de Détail',
+            url: 'sebastianpilon.com/projets/cqcd',
+            tags: [
+                { nom:'PHP'},
+                { nom:'MySQL'},
+                { nom:'Design'},
+                { nom:'Jquery'},
+                { nom:'Responsive Design'}
+            ],
+            imagesUrl:[
+                { url:"images/portfolio/naughtyfactory-desktop.jpg", class:"desktop"},
+                { url:"images/portfolio/naughtyfactory-tablet.jpg", class:"tablet"},
+                { url:"images/portfolio/naughtyfactory-mobile.jpg", class:"mobile"}
+            ],
+            overdescription:"Sondage sur un site web 'responsive' avec collecte de données",
+            description:"Design du site web et intégration des éléments." +
+            "Conception responsive design pour cibler un maximum d'utilisateurs" +
+            "Programmation du côté serveur pour la collecte de données" +
+            "Gestion de la base de données MySQL pour sauvegarder les données collectées"
         }
     ]
 });

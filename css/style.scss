@@ -268,14 +268,15 @@ $fadeInTime: 0.7s;
 
         .wrapper{
           width:78%;
-          max-width:960px;
+          max-width:1200px;
           margin:0 auto;
-          padding-top: 9%;
+          padding-top: 2%;
         }
         h1{
           font-family:quicksandLight;
           color: $titleColor;
           font-size: $titleSize;
+          font-size:3em;
           opacity:0;
           -webkit-animation:fadeIn $fadeInTime ease-in 1s forwards;
           -o-animation:fadeIn $fadeInTime ease-in 1s forwards;
@@ -302,25 +303,71 @@ $fadeInTime: 0.7s;
             font-family:quicksandBold;
           }
         }
+        .space{
+          height:100px;
+        }
         article{
-          border:1px solid #000;
+          //border:1px solid #000;
+          position:relative;
+          margin-bottom:150px;
 
-          img{
-            transform: rotateY(-30deg) rotateX(10deg);
-            transform-origin: left bottom;
-            position: absolute;
-            display:block;
-            -webkit-box-shadow: 1px 0px 0 #000,0 0 30px rgba(0,95,99,0.2);
-            box-shadow: 1px 0px 0 #000,0 0 30px rgba(0,95,99,0.2);
+            .thumbs {
+              float: right;
+              position:relative;
 
-            &.desktop{
-              width:30em;
+              img {
+                transform: rotateY(-30deg) rotateX(10deg);
+                transform-origin: left bottom;
+                display: block;
+                -webkit-box-shadow: 1px 1px 3px #000, 0 0 30px rgba(0, 95, 99, 0.2);
+                box-shadow: 1px 1px 3px #000, 0 0 30px rgba(0, 95, 99, 0.2);
+
+                &.desktop {
+                  width: 35em;
+                  z-index:1;
+                }
+                &.tablet {
+                  position:absolute;
+                  left:-2em;
+                  bottom:-1.5em;
+                  width: 15em;
+                  z-index:2;
+                }
+                &.mobile {
+                  position:absolute;
+                  left:8em;
+                  bottom:-2.5em;
+                  width: 5em;
+                  z-index:3;
+                }
+              }
             }
-            &.tablet{
-              width:15em;
+            h3{
+              font-family:quicksand;
+              font-size:3em;
+              color:$titleColor;
+              margin-bottom:10px;
             }
-            &.mobile{
-              width:7em;
+            h4{
+              font-family:quicksandLight;
+              font-size:1.5em;
+              color:$subtitleColor;
+              margin-bottom:30px;
+              max-width:24em;
+            }
+            .technologies{
+              span{
+                border:1px solid $subtitleColor;
+                background:rgba( $subtitleColor, .35 );
+                padding:3px 5px;
+                margin:0px 5px 0px 2px;
+                display:inline-block;
+              }
+            }
+            .description{
+              font-face:quicksand;
+              color:$primaryColor;
+              max-width:35em;
             }
           }
         }
@@ -373,7 +420,7 @@ $fadeInTime: 0.7s;
         }
       }
     }
-  }
+
 
 .slide{
   width:100%;

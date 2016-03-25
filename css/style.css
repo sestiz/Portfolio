@@ -180,13 +180,14 @@
         overflow: auto; }
         .container .content #Portfolio .wrapper {
           width: 78%;
-          max-width: 960px;
+          max-width: 1200px;
           margin: 0 auto;
-          padding-top: 9%; }
+          padding-top: 2%; }
         .container .content #Portfolio h1 {
           font-family: quicksandLight;
           color: #00b7ea;
           font-size: 4.3em;
+          font-size: 3em;
           opacity: 0;
           -webkit-animation: fadeIn 0.7s ease-in 1s forwards;
           -o-animation: fadeIn 0.7s ease-in 1s forwards;
@@ -207,60 +208,95 @@
           opacity: 1; }
           .container .content #Portfolio p strong {
             font-family: quicksandBold; }
+        .container .content #Portfolio .space {
+          height: 100px; }
         .container .content #Portfolio article {
-          border: 1px solid #000; }
-          .container .content #Portfolio article img {
-            transform: rotateY(-30deg) rotateX(10deg);
-            transform-origin: left bottom;
-            position: absolute;
-            display: block;
-            -webkit-box-shadow: 1px 0px 0 #000, 0 0 30px rgba(0, 95, 99, 0.2);
-            box-shadow: 1px 0px 0 #000, 0 0 30px rgba(0, 95, 99, 0.2); }
-            .container .content #Portfolio article img.desktop {
-              width: 30em; }
-            .container .content #Portfolio article img.tablet {
-              width: 15em; }
-            .container .content #Portfolio article img.mobile {
-              width: 7em; }
-        .container .content #Portfolio .bouton {
-          border: 1px solid #007FA2;
-          border-radius: 5px;
-          background: none;
-          padding: 10px 19px;
-          font-family: quicksand, arial, sans-serif;
-          font-size: 1em;
-          margin: 30px auto;
-          color: #007FA2;
-          display: inline-block;
-          text-decoration: none;
           position: relative;
-          overflow: hidden;
-          z-index: 5;
-          opacity: 0;
-          -webkit-animation: fadeIn 0.7s ease-in 3s forwards;
-          -o-animation: fadeIn 0.7s ease-in 3s forwards;
-          animation: fadeIn 0.7s ease-in 3s forwards; }
-          .container .content #Portfolio .bouton span {
-            transition: all ease 0.3s;
-            animation-delay: 1s; }
-          .container .content #Portfolio .bouton:before {
-            background: #007FA2;
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transition: all ease 0.3s;
-            -webkit-transform: translate3d(-20px, 0px, 0px) rotateZ(45deg);
-            transform: translate3d(0px, 100%, 0px) rotateZ(45deg);
-            transform-origin: top left;
-            z-index: -1; }
-          .container .content #Portfolio .bouton:hover {
-            color: #FFF; }
-            .container .content #Portfolio .bouton:hover:before {
-              -webkit-transform: translate3d(0px, 0px, 0px) rotateZ(0deg);
-              transform: translate3d(0px, 0px, 0px) rotateZ(0deg); }
+          margin-bottom: 150px; }
+          .container .content #Portfolio article .thumbs {
+            float: right;
+            position: relative; }
+            .container .content #Portfolio article .thumbs img {
+              transform: rotateY(-30deg) rotateX(10deg);
+              transform-origin: left bottom;
+              display: block;
+              -webkit-box-shadow: 1px 1px 3px #000, 0 0 30px rgba(0, 95, 99, 0.2);
+              box-shadow: 1px 1px 3px #000, 0 0 30px rgba(0, 95, 99, 0.2); }
+              .container .content #Portfolio article .thumbs img.desktop {
+                width: 35em;
+                z-index: 1; }
+              .container .content #Portfolio article .thumbs img.tablet {
+                position: absolute;
+                left: -2em;
+                bottom: -1.5em;
+                width: 15em;
+                z-index: 2; }
+              .container .content #Portfolio article .thumbs img.mobile {
+                position: absolute;
+                left: 8em;
+                bottom: -2.5em;
+                width: 5em;
+                z-index: 3; }
+          .container .content #Portfolio article h3 {
+            font-family: quicksand;
+            font-size: 3em;
+            color: #00b7ea;
+            margin-bottom: 10px; }
+          .container .content #Portfolio article h4 {
+            font-family: quicksandLight;
+            font-size: 1.5em;
+            color: #007FA2;
+            margin-bottom: 30px;
+            max-width: 24em; }
+          .container .content #Portfolio article .technologies span {
+            border: 1px solid #007FA2;
+            background: rgba(0, 127, 162, 0.35);
+            padding: 3px 5px;
+            margin: 0px 5px 0px 2px;
+            display: inline-block; }
+          .container .content #Portfolio article .description {
+            font-face: quicksand;
+            color: #263143;
+            max-width: 35em; }
+      .container .content .bouton {
+        border: 1px solid #007FA2;
+        border-radius: 5px;
+        background: none;
+        padding: 10px 19px;
+        font-family: quicksand, arial, sans-serif;
+        font-size: 1em;
+        margin: 30px auto;
+        color: #007FA2;
+        display: inline-block;
+        text-decoration: none;
+        position: relative;
+        overflow: hidden;
+        z-index: 5;
+        opacity: 0;
+        -webkit-animation: fadeIn 0.7s ease-in 3s forwards;
+        -o-animation: fadeIn 0.7s ease-in 3s forwards;
+        animation: fadeIn 0.7s ease-in 3s forwards; }
+        .container .content .bouton span {
+          transition: all ease 0.3s;
+          animation-delay: 1s; }
+        .container .content .bouton:before {
+          background: #007FA2;
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transition: all ease 0.3s;
+          -webkit-transform: translate3d(-20px, 0px, 0px) rotateZ(45deg);
+          transform: translate3d(0px, 100%, 0px) rotateZ(45deg);
+          transform-origin: top left;
+          z-index: -1; }
+        .container .content .bouton:hover {
+          color: #FFF; }
+          .container .content .bouton:hover:before {
+            -webkit-transform: translate3d(0px, 0px, 0px) rotateZ(0deg);
+            transform: translate3d(0px, 0px, 0px) rotateZ(0deg); }
 
   .slide {
     width: 100%;
