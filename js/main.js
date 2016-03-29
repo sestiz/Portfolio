@@ -36,7 +36,7 @@ app.controller('portfolioController', function($scope){
     $scope.projets = [
         {
             titre: 'Naughty Factory',
-            url: 'naughtyfactory.com',
+            url: 'http://www.naughtyfactory.com',
             tags: [
                 { nom:'Bootstrap'},
                 { nom:'Javascript'},
@@ -59,7 +59,7 @@ app.controller('portfolioController', function($scope){
         },
         {
             titre: 'Production et Distribution Compagnie X',
-            url: 'bellafd.com',
+            url: 'http://www.bellafd.com',
             tags: [
                 { nom:'Wordpress'},
                 { nom:'Design'},
@@ -114,6 +114,25 @@ $(function(){
         }
     });
 
+    // Menu display on mobile event
+    $(".mobileMenuButton").on("click",function(e){
+        $(".menu").toggle(function(){
+            $(".mobileMenuButton").toggleClass("opened");
+            $("html").toggleClass("full");
+        });
+    });
+
+    // On resize close menu if on mobile
+    // NOT WORKING YET
+    $(document).resize(function(e){
+        var $menu = $(".menu");
+        if(window.innerWidth < 768){
+            $menu.hide();
+        }else{
+            $menu.show();
+        }
+    })
+
     // Init the scrolling lib
     var scroller = skrollr.init({
         edgeStrategy: 'set',
@@ -130,6 +149,11 @@ $(function(){
             },
             mouseleave : function(e) {
                 $(this).removeClass("tada");
+            },
+            click : function(e){
+                if(isMobileSize()){
+                    $(".mobileMenuButton").trigger("click");
+                }
             }
         }
     );
@@ -139,4 +163,12 @@ $(function(){
     $('.portfolio').animateCss('fadeInLeft');
     $('.contact').animateCss('fadeInLeft');
     $('.cv').animateCss('fadeInLeft');
+
+    function isMobileSize(){
+        screen_width = document.documentElement.clientWidth;
+        if(screen_width < 768){
+            return true;
+        }
+        return false
+    }
 });

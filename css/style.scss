@@ -34,13 +34,20 @@ $desktop: 992px;
 
 $menuBackgroundColor: $primaryColor;
 $menuBackgroundSize: 150px;
+$menuBackgroundSizeTablet: 110px;
+$menuBackgroundHeightMobile: 50px;
+
 
 $menuFontSize:1.3em;
 $menuFontColor:#FFF;
 $menuFontHoverColor:#93C1FF;
 
 $titleSize:4.3em;
+$titleSizeMobile:3em;
 $subtitleSize:1.6em;
+$subtitleSizeMobile:1.2em;
+$textSize:1em;
+$textSizeMobile:0.8em;
 
 $titleColor: #00b7ea;
 $subtitleColor: #007FA2;
@@ -49,121 +56,149 @@ $buttonFontSize:1em;
 
 $fadeInTime: 0.7s;
 
+$delay:0.5;
+$delayOffset:0.2;
+
 
 
 // Custom, iPhone Retina
 @media only screen and (min-width : $mobile){
-  .header {
-
+  body,html
+{
+  width:100%;
+  text-rendering: optimizeLegibility;
+}
+  .full{
+    height:100%;
+    overflow:hidden;
   }
-}
-
-// Extra Small Devices, Phones
-@media only screen and (min-width : $tablet) {
-
-}
-
-// Small Devices, Tablets
-@media only screen and (min-width : $desktop) {
-
-  body,html{
+  .header {
     width:100%;
-    height:100%;
-    overflow: hidden;
-    text-rendering: optimizeLegibility;
-  }
-
-  .header {
-    width: $menuBackgroundSize;
-    height:100%;
-    //background: $menuBackgroundColor;
+    height:$menuBackgroundHeightMobile;
     background: -moz-linear-gradient(top,  rgba(0,183,234,1) 0%, rgba(0,229,160,1) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top,  rgba(0,183,234,1) 0%,rgba(0,229,160,1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom,  rgba(0,183,234,1) 0%,rgba(0,229,160,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8000b7ea', endColorstr='#8000e5a0',GradientType=0 ); /* IE6-9 */
     font-family:$primaryFont;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    z-index:7;
 
+    .mobileMenuButton{
+        position: relative;
+        display:  inline-block;
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+        cursor:pointer;
 
+        span {
+          margin: 0 auto;
+          position: relative;
+          top: 15px;
+
+          &:before, &:after {
+            position: absolute;
+            content: '';
+          }
+        }
+        span, span:before, span:after {
+          width: 30px;
+          height: 1px;
+          background-color: #FFF;
+          display: block;
+        }
+        span:before {
+          margin-top: -12px;
+        }
+         span:after {
+          margin-top: 12px;
+        }
+        &.opened span {
+          -webkit-transition-duration: 0s; transition-duration: 0s;
+          -webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+        }
+        &.opened span {
+          background-color: rgba(0,0,0,0.0);
+          -webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+        }
+        &.opened span:before {
+          -webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
+          -webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+          -webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
+        }
+        &.opened span:before {
+          margin-top: 0;
+          -webkit-transform: rotate(45deg); transform: rotate(45deg);
+          -webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+        }
+        &.opened span:after {
+          -webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
+          -webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+          -webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
+        }
+        &.opened span:after {
+          margin-top: 0;
+          -webkit-transform: rotate(-45deg); transform: rotate(-45deg);
+          -webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+        }
+    }
     .menu{
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-      position: relative;
-      top:50%;
-      overflow: hidden;
+      position:fixed;
+      bottom:0;
+      left:0;
+      top:$menuBackgroundHeightMobile;
+      right:0;
+      background:rgba( $subtitleColor, .75 );
+      display:none;
+      z-index:10;
 
       a{
-        display:block;
+        width:100%;
+        border-bottom:1px solid rgba(255,255,255,0.3);
+        display:inline-block;
+        text-align:center;
         font-size:$menuFontSize;
         text-align:center;
-        margin:30px auto;
         color:$menuFontColor;
         text-decoration: none;
-        transition: color ease-in-out 200ms;
+        padding:10px 0;
+        animation-duration: 0s;
+        background:rgba( $subtitleColor, .5 );
 
+
+        &:hover{
+          transition:background ease 300ms;
+          background:rgba( $subtitleColor, 1 );
+        }
+        svg{
+          display:inline;
+          vertical-align: middle;
+          text-decoration:none;
+        }
         p{
-          line-height:1.7em;
+          display:inline;
+          vertical-align: middle;
+          text-decoration:none;
         }
       }
-      $delay:0.5;
-      $delayOffset:0.2;
-      .first{
-        -moz-animation-delay:$delay + s;
-        -webkit-animation-delay:$delay + s;
-        animation-delay:$delay + s;
-      }
-      .second{
-        -moz-animation-delay:$delay + $delayOffset + s;
-        -webkit-animation-delay:$delay + $delayOffset + s;
-        animation-delay:$delay + $delayOffset + s;
-      }
-      .third{
-        -moz-animation-delay:$delay + $delayOffset + $delayOffset + s;
-        -webkit-animation-delay:$delay + $delayOffset + $delayOffset + s;
-        animation-delay: $delay + $delayOffset + $delayOffset + s;
-      }
-      .fourth{
-        -moz-animation-delay:$delay + $delayOffset + $delayOffset + $delayOffset + s;
-        -webkit-animation-delay:$delay + $delayOffset + $delayOffset + $delayOffset + s;
-        animation-delay: $delay + $delayOffset + $delayOffset + $delayOffset + s;
-      }
     }
-    }
+  }
 
-  .container {
-    width:100%;
-    height:100%;
-    background:#E0FFFE;
-    display: block;
-    overflow:hidden;
+  .container{
 
     .content{
-      padding-left: $menuBackgroundSize;width: 100%;
-      height: 100%;
-      display: block;
-      box-sizing: border-box;
-
       #About{
         width: 100%;
-        height: 100%;
         position: relative;
         font-family: $primaryFont;
 
         .wrapper{
-          width:78%;
-          max-width:960px;
+          width:auto;
           margin:0 auto;
-          padding-top: 9%;
+          padding:9% 10% 0 10%;
         }
         h1{
           font-family:quicksandLight;
           color: $titleColor;
-          font-size: $titleSize;
+          font-size: $titleSizeMobile;
           opacity:0;
           -webkit-animation:fadeIn $fadeInTime ease-in 1s forwards;
           -o-animation:fadeIn $fadeInTime ease-in 1s forwards;
@@ -174,7 +209,7 @@ $fadeInTime: 0.7s;
           margin-top: 0.63em;
           margin-bottom:1.3em;
           color: $subtitleColor;
-          font-size: $subtitleSize;
+          font-size: $subtitleSizeMobile;
           opacity:0;
           -webkit-animation:fadeIn $fadeInTime ease-in 1.5s forwards;
           -o-animation:fadeIn $fadeInTime ease-in 1.5s forwards;
@@ -182,6 +217,7 @@ $fadeInTime: 0.7s;
         }
         p{
           margin-top:0.83em;
+          font-size:$textSizeMobile;
           color:$textColor;
 
           opacity:0;
@@ -209,167 +245,6 @@ $fadeInTime: 0.7s;
           -webkit-animation:fadeIn $fadeInTime ease-in 2.6s forwards;
           -o-animation:fadeIn $fadeInTime ease-in 2.6s forwards;
           animation:fadeIn $fadeInTime ease-in 2.6s forwards;
-        }
-        .bouton{
-          border: 1px solid $textColor;
-          border-radius: 5px;
-          background: none;
-          padding: 10px 19px;
-          font-family: $primaryFont;
-          font-size: $buttonFontSize;
-          margin: 30px auto;
-          color: $textColor;
-          display: inline-block;
-          text-decoration:none;
-          position:relative;
-          overflow:hidden;
-          z-index:5;
-
-          opacity:0;
-          -webkit-animation:fadeIn $fadeInTime ease-in 3s forwards;
-          -o-animation:fadeIn $fadeInTime ease-in 3s forwards;
-          animation:fadeIn $fadeInTime ease-in 3s forwards;
-
-            span{
-              transition: all ease 0.3s;
-              animation-delay:1s;
-            }
-            &:before{
-              background: #007FA2;
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              transition: all ease 0.3s;
-              -webkit-transform: translate3d(-20px,0px,0px) rotateZ(45deg);
-              transform: translate3d(0px,100%,0px) rotateZ(45deg);
-              transform-origin:top left;
-              z-index: -1;
-            }
-            &:hover{
-              color:#FFF;
-
-              &:before{
-                -webkit-transform: translate3d(0px,0px,0px) rotateZ(0deg);
-                transform: translate3d(0px,0px,0px) rotateZ(0deg);
-              }
-            }
-        }
-      }
-
-      #Portfolio{
-        width: 100%;
-        min-height: 100%;
-        position: relative;
-        font-family: $primaryFont;
-        overflow:auto;
-
-        .wrapper{
-          width:78%;
-          max-width:1200px;
-          margin:0 auto;
-          padding-top: 2%;
-        }
-        h1{
-          font-family:quicksandLight;
-          color: $titleColor;
-          font-size: $titleSize;
-          font-size:3em;
-          opacity:0;
-          -webkit-animation:fadeIn $fadeInTime ease-in 1s forwards;
-          -o-animation:fadeIn $fadeInTime ease-in 1s forwards;
-          animation:fadeIn $fadeInTime ease-in 1s forwards;
-        }
-        h2{
-          font-family:quicksandLight;
-          margin-top: 0.63em;
-          margin-bottom:1.3em;
-          color: $subtitleColor;
-          font-size: $subtitleSize;
-          opacity:0;
-          -webkit-animation:fadeIn $fadeInTime ease-in 1.5s forwards;
-          -o-animation:fadeIn $fadeInTime ease-in 1.5s forwards;
-          animation:fadeIn $fadeInTime ease-in 1.5s forwards;
-        }
-        p{
-          margin-top:0.83em;
-          color:$textColor;
-
-          opacity:1;
-
-          strong{
-            font-family:quicksandBold;
-          }
-        }
-        .space{
-          height:100px;
-        }
-        article{
-          //border:1px solid #000;
-          position:relative;
-          margin-bottom:150px;
-
-            .thumbs {
-              float: right;
-              position:relative;
-
-              img {
-                transform: rotateY(-30deg) rotateX(10deg);
-                transform-origin: left bottom;
-                display: block;
-                -webkit-box-shadow: 1px 1px 3px #000, 0 0 30px rgba(0, 95, 99, 0.2);
-                box-shadow: 1px 1px 3px #000, 0 0 30px rgba(0, 95, 99, 0.2);
-
-                &.desktop {
-                  width: 35em;
-                  z-index:1;
-                }
-                &.tablet {
-                  position:absolute;
-                  left:-2em;
-                  bottom:-1.5em;
-                  width: 15em;
-                  z-index:2;
-                }
-                &.mobile {
-                  position:absolute;
-                  left:8em;
-                  bottom:-2.5em;
-                  width: 5em;
-                  z-index:3;
-                }
-              }
-            }
-            h3{
-              font-family:quicksand;
-              font-size:3em;
-              color:$titleColor;
-              margin-bottom:10px;
-            }
-            h4{
-              font-family:quicksandLight;
-              font-size:1.5em;
-              color:$subtitleColor;
-              margin-bottom:30px;
-              max-width:24em;
-            }
-            .technologies{
-              span{
-                border:1px solid $subtitleColor;
-                background:rgba( $subtitleColor, .35 );
-                padding:3px 5px;
-                margin:0px 5px 0px 2px;
-                display:inline-block;
-              }
-            }
-            .description{
-              font-face:quicksand;
-              color:$primaryColor;
-              max-width:35em;
-            }
-          }
         }
         .bouton{
           border: 1px solid $textColor;
@@ -419,69 +294,521 @@ $fadeInTime: 0.7s;
           }
         }
       }
+
+      #Portfolio{
+        width: 100%;
+        min-height: 100%;
+        position: relative;
+        font-family: $primaryFont;
+        overflow-x:hidden;
+
+        .wrapper{
+          width:78%;
+          max-width:1200px;
+          margin:0 auto;
+          padding-top: 2%;
+        }
+        h1{
+          font-family:quicksandLight;
+          color: $titleColor;
+          font-size: $titleSizeMobile;
+          opacity:0;
+          -webkit-animation:fadeIn $fadeInTime ease-in 1s forwards;
+          -o-animation:fadeIn $fadeInTime ease-in 1s forwards;
+          animation:fadeIn $fadeInTime ease-in 1s forwards;
+        }
+        h2{
+          font-family:quicksandLight;
+          margin-top: 0.63em;
+          margin-bottom:1.3em;
+          color: $subtitleColor;
+          font-size: $subtitleSizeMobile;
+          opacity:0;
+          -webkit-animation:fadeIn $fadeInTime ease-in 1.5s forwards;
+          -o-animation:fadeIn $fadeInTime ease-in 1.5s forwards;
+          animation:fadeIn $fadeInTime ease-in 1.5s forwards;
+        }
+        p{
+          margin-top:0.83em;
+          font-size:$textSizeMobile;
+          color:$textColor;
+
+          opacity:1;
+
+          strong{
+            font-family:quicksandBold;
+          }
+        }
+        .space{
+          height:50px;
+        }
+        article{
+          //border:1px solid #000;
+          position:relative;
+          margin-bottom:50px;
+
+          .thumbs {
+            //float: right;
+            position:relative;
+            margin:0 auto;
+            width: 7em;
+
+            img {
+              transform: rotateY(-30deg) rotateX(10deg);
+              transform-origin: left bottom;
+              display: block;
+              -webkit-box-shadow: 1px 1px 3px #000, 0 0 30px rgba(0, 95, 99, 0.2);
+              box-shadow: 1px 1px 3px #000, 0 0 30px rgba(0, 95, 99, 0.2);
+
+              &.desktop {
+                width: 10em;
+                z-index:1;
+              }
+              &.tablet {
+                position:absolute;
+                left:-0.5em;
+                bottom:-0.5em;
+                width: 5em;
+                z-index:2;
+              }
+              &.mobile {
+                position:absolute;
+                left:3em;
+                bottom:-1em;
+                width: 1.8em;
+                z-index:3;
+              }
+            }
+          }
+          h3{
+            font-family:quicksand;
+            font-size:3em;
+            color:$titleColor;
+            margin-bottom:10px;
+
+            a{
+              text-decoration:none;
+              color:$titleColor;
+              transition:color ease 300ms;
+
+              &:hover{
+                color:darken($titleColor,20%);
+              }
+            }
+          }
+          h4{
+            font-family:quicksandLight;
+            font-size:1.5em;
+            color:$subtitleColor;
+            margin-bottom:30px;
+            max-width:24em;
+          }
+          .technologies{
+            span{
+              border:1px solid $subtitleColor;
+              background:rgba( $subtitleColor, .35 );
+              padding:3px 5px;
+              margin:0px 5px 0px 2px;
+              display:inline-block;
+            }
+          }
+          .description{
+            font-face:quicksand;
+            color:$primaryColor;
+            max-width:35em;
+          }
+        }
+      }
+      .bouton{
+        border: 1px solid $textColor;
+        border-radius: 5px;
+        background: none;
+        padding: 10px 19px;
+        font-family: $primaryFont;
+        font-size: $buttonFontSize;
+        margin: 30px auto;
+        color: $textColor;
+        display: inline-block;
+        text-decoration:none;
+        position:relative;
+        overflow:hidden;
+        z-index:5;
+
+        opacity:0;
+        -webkit-animation:fadeIn $fadeInTime ease-in 3s forwards;
+        -o-animation:fadeIn $fadeInTime ease-in 3s forwards;
+        animation:fadeIn $fadeInTime ease-in 3s forwards;
+
+        span{
+          transition: all ease 0.3s;
+          animation-delay:1s;
+        }
+        &:before{
+          background: #007FA2;
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transition: all ease 0.3s;
+          -webkit-transform: translate3d(-20px,0px,0px) rotateZ(45deg);
+          transform: translate3d(0px,100%,0px) rotateZ(45deg);
+          transform-origin:top left;
+          z-index: -1;
+        }
+        &:hover{
+          color:#FFF;
+
+          &:before{
+            -webkit-transform: translate3d(0px,0px,0px) rotateZ(0deg);
+            transform: translate3d(0px,0px,0px) rotateZ(0deg);
+          }
+        }
+      }
+
+      .slide{
+        width:100%;
+        height:100%;
+      }
+      @keyframes rotateFall {
+        0%      { transform: rotateZ(0deg); }
+        20%     { transform: rotateZ(10deg); animation-timing-function: ease-out; }
+        40%     { transform: rotateZ(17deg); }
+        60%     { transform: rotateZ(16deg); }
+        100%    { transform: translateY(100%) rotateZ(17deg); }
+      }
+      @keyframes slideOutLeft {
+        to      { transform: translateX(-100%); }
+      }
+      @keyframes rotateOutNewspaper {
+        to      { transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
+      }
+      @keyframes fadeIn {
+        from    { opacity: 0; }
+        to      { opacity: 1; }
+      }
+      @keyframes fadeOut {
+        from    { opacity: 1; }
+        to      { opacity: 0; }
+      }
+      @keyframes slideInRight {
+        from    { transform:translateX(100%); }
+        to      { transform: translateX(0); }
+      }
+      @keyframes slideInUp {
+        from    { transform:translateY(100%); }
+        to      { transform: translateY(0); }
+      }
+      .ng-enter       { z-index: 8888; }
+      .ng-leave       { z-index: 9999; }
+      .aboutanim.ng-enter         { animation: fadeIn 0.5s both ease-in; animation-delay: 0.6s; }
+      .aboutanim.ng-leave         { animation: fadeOut 0.2s both ease-in; animation-delay: 0s; }
+      .portfolioanim.ng-enter        { animation:slideInRight 0.5s both ease-in; animation-delay:0.3s; }
+      .portfolioanim.ng-leave        { animation:slideOutLeft 0.5s both ease-in; }
+      .contactanim.ng-leave      { transform-origin: 50% 50%; animation: rotateOutNewspaper .5s both ease-in; }
+      .contactanim.ng-enter      { animation:slideInUp 0.5s both ease-in; }
+    }
+  }
+}
+
+// Extra Small Devices, Phones
+@media only screen and (min-width : $tablet) {
+
+
+  .header{
+    width: $menuBackgroundSizeTablet;
+    height:100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index:7;
+
+    .mobileMenuButton{
+      display:none;
+    }
+    .menu{
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      position: relative;
+      top:50%;
+      overflow: hidden;
+      display:block;
+      background:none;
+
+      a{
+        display:block;
+        font-size:$menuFontSize;
+        text-align:center;
+        margin: 10px auto;
+        color:$menuFontColor;
+        text-decoration: none;
+        background:none;
+        border:none;
+        transition: color ease-in-out 200ms;
+        animation-duration: 1s;-webkit-animation-duration:1s;
+
+        &:hover{
+          background:none;
+        }
+        svg{
+          display:inline;
+        }
+        p{
+          line-height:1.7em;
+          display:block;
+        }
+      }
+      .first{
+        -moz-animation-delay:$delay + s;
+        -webkit-animation-delay:$delay + s;
+        animation-delay:$delay + s;
+      }
+      .second{
+        -moz-animation-delay:$delay + $delayOffset + s;
+        -webkit-animation-delay:$delay + $delayOffset + s;
+        animation-delay:$delay + $delayOffset + s;
+      }
+      .third{
+        -moz-animation-delay:$delay + $delayOffset + $delayOffset + s;
+        -webkit-animation-delay:$delay + $delayOffset + $delayOffset + s;
+        animation-delay: $delay + $delayOffset + $delayOffset + s;
+      }
+      .fourth{
+        -moz-animation-delay:$delay + $delayOffset + $delayOffset + $delayOffset + s;
+        -webkit-animation-delay:$delay + $delayOffset + $delayOffset + $delayOffset + s;
+        animation-delay: $delay + $delayOffset + $delayOffset + $delayOffset + s;
+      }
+    }
+  }
+
+
+
+  .container{
+    width:100%;
+    height:100%;
+    background:#E0FFFE;
+    display: block;
+    overflow:hidden;
+
+    .content{
+      padding-left: $menuBackgroundSize;
+      width: 100%;
+      height: 100%;
+      display: block;
+      box-sizing: border-box;
+
+      #About{
+        width: 100%;
+        font-size:$textSize;
+
+        .wrapper{
+          width:78%;
+          max-width:960px;
+          margin:0 auto;
+          padding-top: 9%;
+        }
+        h1{
+          font-size: $titleSize;
+        }
+        h2{
+          font-family:quicksandLight;
+          margin-top: 0.63em;
+          margin-bottom:1.3em;
+          font-size: $subtitleSize;
+        }
+        p{
+          margin-top:0.83em;
+          font-size:$textSize;
+
+          opacity:0;
+        }
+        .bouton{
+          border: 1px solid $textColor;
+          border-radius: 5px;
+          background: none;
+          padding: 10px 19px;
+          font-size: $buttonFontSize;
+          margin: 30px auto;
+          color: $textColor;
+          display: inline-block;
+          opacity:0;
+
+          span{
+            transition: all ease 0.3s;
+            animation-delay:1s;
+          }
+          &:before{
+            background: #007FA2;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: all ease 0.3s;
+            -webkit-transform: translate3d(-20px,0px,0px) rotateZ(45deg);
+            transform: translate3d(0px,100%,0px) rotateZ(45deg);
+            transform-origin:top left;
+            z-index: -1;
+          }
+          &:hover{
+            color:#FFF;
+
+            &:before{
+              -webkit-transform: translate3d(0px,0px,0px) rotateZ(0deg);
+              transform: translate3d(0px,0px,0px) rotateZ(0deg);
+            }
+          }
+        }
+      }
+      #Portfolio{
+        width: 100%;
+        min-height: 100%;
+        position: relative;
+        font-family: $primaryFont;
+        overflow:auto;
+
+        .wrapper{
+          width:78%;
+          max-width:1200px;
+          margin:0 auto;
+          padding-top: 2%;
+        }
+        h1{
+          font-family:quicksandLight;
+          color: $titleColor;
+          font-size: $titleSize;
+          font-size:3em;
+          opacity:0;
+          -webkit-animation:fadeIn $fadeInTime ease-in 1s forwards;
+          -o-animation:fadeIn $fadeInTime ease-in 1s forwards;
+          animation:fadeIn $fadeInTime ease-in 1s forwards;
+        }
+        h2{
+          font-family:quicksandLight;
+          margin-top: 0.63em;
+          margin-bottom:1.3em;
+          color: $subtitleColor;
+          font-size: $subtitleSize;
+          opacity:0;
+          -webkit-animation:fadeIn $fadeInTime ease-in 1.5s forwards;
+          -o-animation:fadeIn $fadeInTime ease-in 1.5s forwards;
+          animation:fadeIn $fadeInTime ease-in 1.5s forwards;
+        }
+        p{
+          margin-top:0.83em;
+          font-size:$textSize;
+          color:$textColor;
+
+          opacity:1;
+
+          strong{
+            font-family:quicksandBold;
+          }
+        }
+        .space{
+          height:100px;
+        }
+        article{
+          //border:1px solid #000;
+          position:relative;
+          margin-bottom:150px;
+
+          .thumbs {
+            float: right;
+            position:relative;
+            width: auto;
+
+            img {
+              transform: rotateY(-30deg) rotateX(10deg);
+              transform-origin: left bottom;
+              display: block;
+              -webkit-box-shadow: 1px 1px 3px #000, 0 0 30px rgba(0, 95, 99, 0.2);
+              box-shadow: 1px 1px 3px #000, 0 0 30px rgba(0, 95, 99, 0.2);
+
+              &.desktop {
+                width: 35em;
+                z-index:1;
+              }
+              &.tablet {
+                position:absolute;
+                left:-2em;
+                bottom:-1.5em;
+                width: 15em;
+                z-index:2;
+              }
+              &.mobile {
+                position:absolute;
+                left:8em;
+                bottom:-2.5em;
+                width: 5em;
+                z-index:3;
+              }
+            }
+          }
+          h3{
+            font-family:quicksand;
+            font-size:3em;
+            color:$titleColor;
+            margin-bottom:10px;
+          }
+          h4{
+            font-family:quicksandLight;
+            font-size:1.5em;
+            color:$subtitleColor;
+            margin-bottom:30px;
+            max-width:24em;
+          }
+          .technologies{
+            span{
+              border:1px solid $subtitleColor;
+              background:rgba( $subtitleColor, .35 );
+              padding:3px 5px;
+              margin:0px 5px 0px 2px;
+              display:inline-block;
+            }
+          }
+          .description{
+            font-face:quicksand;
+            color:$primaryColor;
+            max-width:35em;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Small Devices, Tablets
+@media only screen and (min-width : $desktop) {
+  html,body{
+    height:100%;
+  }
+  .header {
+    width: $menuBackgroundSize;
+
+    .menu {
+
+      a {
+        color: $menuFontColor;
+
+        p {
+          line-height: 1.7em;
+        }
+      }
+
+    }
+  }
+
+  .container {
+
+    .content {
+      padding-left: $menuBackgroundSize;
+
     }
 
-
-.slide{
-  width:100%;
-  height:100%;
-}
-  @keyframes rotateFall {
-    0%      { transform: rotateZ(0deg); }
-    20%     { transform: rotateZ(10deg); animation-timing-function: ease-out; }
-    40%     { transform: rotateZ(17deg); }
-    60%     { transform: rotateZ(16deg); }
-    100%    { transform: translateY(100%) rotateZ(17deg); }
   }
-
-  /* slide in from the bottom */
-  @keyframes slideOutLeft {
-    to      { transform: translateX(-100%); }
-  }
-
-  /* rotate out newspaper */
-  @keyframes rotateOutNewspaper {
-    to      { transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
-  }
-
-  /* entering animations --------------------------------------- */
-  /* fadein */
-  @keyframes fadeIn {
-    from    { opacity: 0; }
-    to      { opacity: 1; }
-  }
-
-  @keyframes fadeOut {
-    from    { opacity: 1; }
-    to      { opacity: 0; }
-  }
-
-  /* slide in from the right */
-  @keyframes slideInRight {
-    from    { transform:translateX(100%); }
-    to      { transform: translateX(0); }
-  }
-
-  /* slide in from the bottom */
-  @keyframes slideInUp {
-    from    { transform:translateY(100%); }
-    to      { transform: translateY(0); }
-  }
-
-  .ng-enter       { z-index: 8888; }
-  .ng-leave       { z-index: 9999; }
-
-  /* page specific animations ------------------------ */
-
-  /* home -------------------------- */
-  .aboutanim.ng-enter         { animation: fadeIn 0.5s both ease-in; animation-delay: 0.6s; }
-  .aboutanim.ng-leave         { animation: fadeOut 0.2s both ease-in; animation-delay: 0s; }
-
-  /* about ------------------------ */
-  .portfolioanim.ng-enter        { animation:slideInRight 0.5s both ease-in; animation-delay:0.3s; }
-  .portfolioanim.ng-leave        { animation:slideOutLeft 0.5s both ease-in; }
-
-  /* contact ---------------------- */
-  .contactanim.ng-leave      { transform-origin: 50% 50%; animation: rotateOutNewspaper .5s both ease-in; }
-  .contactanim.ng-enter      { animation:slideInUp 0.5s both ease-in; }
 }

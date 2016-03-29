@@ -13,16 +13,18 @@
   src: url("../fonts/Quicksand-Light.otf");
   font-weight: normal;
   font-style: normal; }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 0px) {
   body, html {
     width: 100%;
-    height: 100%;
-    overflow: hidden;
     text-rendering: optimizeLegibility; }
 
-  .header {
-    width: 150px;
+  .full {
     height: 100%;
+    overflow: hidden; }
+
+  .header {
+    width: 100%;
+    height: 50px;
     background: -moz-linear-gradient(top, #00b7ea 0%, #00e5a0 100%);
     /* FF3.6-15 */
     background: -webkit-linear-gradient(top, #00b7ea 0%, #00e5a0 100%);
@@ -31,29 +33,419 @@
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8000b7ea', endColorstr='#8000e5a0',GradientType=0 );
     /* IE6-9 */
+    font-family: quicksand, arial, sans-serif; }
+    .header .mobileMenuButton {
+      position: relative;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin: 10px;
+      cursor: pointer; }
+      .header .mobileMenuButton span {
+        margin: 0 auto;
+        position: relative;
+        top: 15px; }
+        .header .mobileMenuButton span:before, .header .mobileMenuButton span:after {
+          position: absolute;
+          content: ''; }
+      .header .mobileMenuButton span, .header .mobileMenuButton span:before, .header .mobileMenuButton span:after {
+        width: 30px;
+        height: 1px;
+        background-color: #FFF;
+        display: block; }
+      .header .mobileMenuButton span:before {
+        margin-top: -12px; }
+      .header .mobileMenuButton span:after {
+        margin-top: 12px; }
+      .header .mobileMenuButton.opened span {
+        -webkit-transition-duration: 0s;
+        transition-duration: 0s;
+        -webkit-transition-delay: 0.2s;
+        transition-delay: 0.2s; }
+      .header .mobileMenuButton.opened span {
+        background-color: transparent;
+        -webkit-transition-delay: 0.2s;
+        transition-delay: 0.2s; }
+      .header .mobileMenuButton.opened span:before {
+        -webkit-transition-property: margin, -webkit-transform;
+        transition-property: margin, transform;
+        -webkit-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+        -webkit-transition-delay: 0.2s, 0s;
+        transition-delay: 0.2s, 0s; }
+      .header .mobileMenuButton.opened span:before {
+        margin-top: 0;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-transition-delay: 0s, 0.2s;
+        transition-delay: 0s, 0.2s; }
+      .header .mobileMenuButton.opened span:after {
+        -webkit-transition-property: margin, -webkit-transform;
+        transition-property: margin, transform;
+        -webkit-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+        -webkit-transition-delay: 0.2s, 0s;
+        transition-delay: 0.2s, 0s; }
+      .header .mobileMenuButton.opened span:after {
+        margin-top: 0;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transition-delay: 0s, 0.2s;
+        transition-delay: 0s, 0.2s; }
+    .header .menu {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      top: 50px;
+      right: 0;
+      background: rgba(0, 127, 162, 0.75);
+      display: none;
+      z-index: 10; }
+      .header .menu a {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        display: inline-block;
+        text-align: center;
+        font-size: 1.3em;
+        text-align: center;
+        color: #FFF;
+        text-decoration: none;
+        padding: 10px 0;
+        animation-duration: 0s;
+        background: rgba(0, 127, 162, 0.5); }
+        .header .menu a:hover {
+          transition: background ease 300ms;
+          background: #007fa2; }
+        .header .menu a svg {
+          display: inline;
+          vertical-align: middle;
+          text-decoration: none; }
+        .header .menu a p {
+          display: inline;
+          vertical-align: middle;
+          text-decoration: none; }
+
+  .container .content #About {
+    width: 100%;
+    position: relative;
+    font-family: quicksand, arial, sans-serif; }
+    .container .content #About .wrapper {
+      width: auto;
+      margin: 0 auto;
+      padding: 9% 10% 0 10%; }
+    .container .content #About h1 {
+      font-family: quicksandLight;
+      color: #00b7ea;
+      font-size: 3em;
+      opacity: 0;
+      -webkit-animation: fadeIn 0.7s ease-in 1s forwards;
+      -o-animation: fadeIn 0.7s ease-in 1s forwards;
+      animation: fadeIn 0.7s ease-in 1s forwards; }
+    .container .content #About h2 {
+      font-family: quicksandLight;
+      margin-top: 0.63em;
+      margin-bottom: 1.3em;
+      color: #007FA2;
+      font-size: 1.2em;
+      opacity: 0;
+      -webkit-animation: fadeIn 0.7s ease-in 1.5s forwards;
+      -o-animation: fadeIn 0.7s ease-in 1.5s forwards;
+      animation: fadeIn 0.7s ease-in 1.5s forwards; }
+    .container .content #About p {
+      margin-top: 0.83em;
+      font-size: 0.8em;
+      color: #007FA2;
+      opacity: 0; }
+      .container .content #About p strong {
+        font-family: quicksandBold; }
+    .container .content #About .description1 {
+      -webkit-animation: fadeIn 0.7s ease-in 2s forwards;
+      -o-animation: fadeIn 0.7s ease-in 2s forwards;
+      animation: fadeIn 0.7s ease-in 2s forwards; }
+    .container .content #About .description2 {
+      -webkit-animation: fadeIn 0.7s ease-in 2.2s forwards;
+      -o-animation: fadeIn 0.7s ease-in 2.2s forwards;
+      animation: fadeIn 0.7s ease-in 2.2s forwards; }
+    .container .content #About .description3 {
+      -webkit-animation: fadeIn 0.7s ease-in 2.4s forwards;
+      -o-animation: fadeIn 0.7s ease-in 2.4s forwards;
+      animation: fadeIn 0.7s ease-in 2.4s forwards; }
+    .container .content #About .description4 {
+      -webkit-animation: fadeIn 0.7s ease-in 2.6s forwards;
+      -o-animation: fadeIn 0.7s ease-in 2.6s forwards;
+      animation: fadeIn 0.7s ease-in 2.6s forwards; }
+    .container .content #About .bouton {
+      border: 1px solid #007FA2;
+      border-radius: 5px;
+      background: none;
+      padding: 10px 19px;
+      font-family: quicksand, arial, sans-serif;
+      font-size: 1em;
+      margin: 30px auto;
+      color: #007FA2;
+      display: inline-block;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      z-index: 5;
+      opacity: 0;
+      -webkit-animation: fadeIn 0.7s ease-in 3s forwards;
+      -o-animation: fadeIn 0.7s ease-in 3s forwards;
+      animation: fadeIn 0.7s ease-in 3s forwards; }
+      .container .content #About .bouton span {
+        transition: all ease 0.3s;
+        animation-delay: 1s; }
+      .container .content #About .bouton:before {
+        background: #007FA2;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all ease 0.3s;
+        -webkit-transform: translate3d(-20px, 0px, 0px) rotateZ(45deg);
+        transform: translate3d(0px, 100%, 0px) rotateZ(45deg);
+        transform-origin: top left;
+        z-index: -1; }
+      .container .content #About .bouton:hover {
+        color: #FFF; }
+        .container .content #About .bouton:hover:before {
+          -webkit-transform: translate3d(0px, 0px, 0px) rotateZ(0deg);
+          transform: translate3d(0px, 0px, 0px) rotateZ(0deg); }
+  .container .content #Portfolio {
+    width: 100%;
+    min-height: 100%;
+    position: relative;
     font-family: quicksand, arial, sans-serif;
+    overflow-x: hidden; }
+    .container .content #Portfolio .wrapper {
+      width: 78%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 2%; }
+    .container .content #Portfolio h1 {
+      font-family: quicksandLight;
+      color: #00b7ea;
+      font-size: 3em;
+      opacity: 0;
+      -webkit-animation: fadeIn 0.7s ease-in 1s forwards;
+      -o-animation: fadeIn 0.7s ease-in 1s forwards;
+      animation: fadeIn 0.7s ease-in 1s forwards; }
+    .container .content #Portfolio h2 {
+      font-family: quicksandLight;
+      margin-top: 0.63em;
+      margin-bottom: 1.3em;
+      color: #007FA2;
+      font-size: 1.2em;
+      opacity: 0;
+      -webkit-animation: fadeIn 0.7s ease-in 1.5s forwards;
+      -o-animation: fadeIn 0.7s ease-in 1.5s forwards;
+      animation: fadeIn 0.7s ease-in 1.5s forwards; }
+    .container .content #Portfolio p {
+      margin-top: 0.83em;
+      font-size: 0.8em;
+      color: #007FA2;
+      opacity: 1; }
+      .container .content #Portfolio p strong {
+        font-family: quicksandBold; }
+    .container .content #Portfolio .space {
+      height: 50px; }
+    .container .content #Portfolio article {
+      position: relative;
+      margin-bottom: 50px; }
+      .container .content #Portfolio article .thumbs {
+        position: relative;
+        margin: 0 auto;
+        width: 7em; }
+        .container .content #Portfolio article .thumbs img {
+          transform: rotateY(-30deg) rotateX(10deg);
+          transform-origin: left bottom;
+          display: block;
+          -webkit-box-shadow: 1px 1px 3px #000, 0 0 30px rgba(0, 95, 99, 0.2);
+          box-shadow: 1px 1px 3px #000, 0 0 30px rgba(0, 95, 99, 0.2); }
+          .container .content #Portfolio article .thumbs img.desktop {
+            width: 10em;
+            z-index: 1; }
+          .container .content #Portfolio article .thumbs img.tablet {
+            position: absolute;
+            left: -0.5em;
+            bottom: -0.5em;
+            width: 5em;
+            z-index: 2; }
+          .container .content #Portfolio article .thumbs img.mobile {
+            position: absolute;
+            left: 3em;
+            bottom: -1em;
+            width: 1.8em;
+            z-index: 3; }
+      .container .content #Portfolio article h3 {
+        font-family: quicksand;
+        font-size: 3em;
+        color: #00b7ea;
+        margin-bottom: 10px; }
+        .container .content #Portfolio article h3 a {
+          text-decoration: none;
+          color: #00b7ea;
+          transition: color ease 300ms; }
+          .container .content #Portfolio article h3 a:hover {
+            color: #006784; }
+      .container .content #Portfolio article h4 {
+        font-family: quicksandLight;
+        font-size: 1.5em;
+        color: #007FA2;
+        margin-bottom: 30px;
+        max-width: 24em; }
+      .container .content #Portfolio article .technologies span {
+        border: 1px solid #007FA2;
+        background: rgba(0, 127, 162, 0.35);
+        padding: 3px 5px;
+        margin: 0px 5px 0px 2px;
+        display: inline-block; }
+      .container .content #Portfolio article .description {
+        font-face: quicksand;
+        color: #263143;
+        max-width: 35em; }
+  .container .content .bouton {
+    border: 1px solid #007FA2;
+    border-radius: 5px;
+    background: none;
+    padding: 10px 19px;
+    font-family: quicksand, arial, sans-serif;
+    font-size: 1em;
+    margin: 30px auto;
+    color: #007FA2;
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+    opacity: 0;
+    -webkit-animation: fadeIn 0.7s ease-in 3s forwards;
+    -o-animation: fadeIn 0.7s ease-in 3s forwards;
+    animation: fadeIn 0.7s ease-in 3s forwards; }
+    .container .content .bouton span {
+      transition: all ease 0.3s;
+      animation-delay: 1s; }
+    .container .content .bouton:before {
+      background: #007FA2;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all ease 0.3s;
+      -webkit-transform: translate3d(-20px, 0px, 0px) rotateZ(45deg);
+      transform: translate3d(0px, 100%, 0px) rotateZ(45deg);
+      transform-origin: top left;
+      z-index: -1; }
+    .container .content .bouton:hover {
+      color: #FFF; }
+      .container .content .bouton:hover:before {
+        -webkit-transform: translate3d(0px, 0px, 0px) rotateZ(0deg);
+        transform: translate3d(0px, 0px, 0px) rotateZ(0deg); }
+  .container .content .slide {
+    width: 100%;
+    height: 100%; }
+  @keyframes rotateFall {
+    0% {
+      transform: rotateZ(0deg); }
+    20% {
+      transform: rotateZ(10deg);
+      animation-timing-function: ease-out; }
+    40% {
+      transform: rotateZ(17deg); }
+    60% {
+      transform: rotateZ(16deg); }
+    100% {
+      transform: translateY(100%) rotateZ(17deg); } }
+  @keyframes slideOutLeft {
+    to {
+      transform: translateX(-100%); } }
+  @keyframes rotateOutNewspaper {
+    to {
+      transform: translateZ(-3000px) rotateZ(360deg);
+      opacity: 0; } }
+  @keyframes fadeIn {
+    from {
+      opacity: 0; }
+    to {
+      opacity: 1; } }
+  @keyframes fadeOut {
+    from {
+      opacity: 1; }
+    to {
+      opacity: 0; } }
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%); }
+    to {
+      transform: translateX(0); } }
+  @keyframes slideInUp {
+    from {
+      transform: translateY(100%); }
+    to {
+      transform: translateY(0); } }
+  .container .content .ng-enter {
+    z-index: 8888; }
+  .container .content .ng-leave {
+    z-index: 9999; }
+  .container .content .aboutanim.ng-enter {
+    animation: fadeIn 0.5s both ease-in;
+    animation-delay: 0.6s; }
+  .container .content .aboutanim.ng-leave {
+    animation: fadeOut 0.2s both ease-in;
+    animation-delay: 0s; }
+  .container .content .portfolioanim.ng-enter {
+    animation: slideInRight 0.5s both ease-in;
+    animation-delay: 0.3s; }
+  .container .content .portfolioanim.ng-leave {
+    animation: slideOutLeft 0.5s both ease-in; }
+  .container .content .contactanim.ng-leave {
+    transform-origin: 50% 50%;
+    animation: rotateOutNewspaper .5s both ease-in; }
+  .container .content .contactanim.ng-enter {
+    animation: slideInUp 0.5s both ease-in; } }
+@media only screen and (min-width: 768px) {
+  .header {
+    width: 110px;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
     overflow: hidden;
     z-index: 7; }
+    .header .mobileMenuButton {
+      display: none; }
     .header .menu {
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
       position: relative;
       top: 50%;
-      overflow: hidden; }
+      overflow: hidden;
+      display: block;
+      background: none; }
       .header .menu a {
         display: block;
         font-size: 1.3em;
         text-align: center;
-        margin: 30px auto;
+        margin: 10px auto;
         color: #FFF;
         text-decoration: none;
-        transition: color ease-in-out 200ms; }
+        background: none;
+        border: none;
+        transition: color ease-in-out 200ms;
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s; }
+        .header .menu a:hover {
+          background: none; }
+        .header .menu a svg {
+          display: inline; }
         .header .menu a p {
-          line-height: 1.7em; }
+          line-height: 1.7em;
+          display: block; }
       .header .menu .first {
         -moz-animation-delay: 0.5s;
         -webkit-animation-delay: 0.5s;
@@ -85,72 +477,33 @@
       box-sizing: border-box; }
       .container .content #About {
         width: 100%;
-        height: 100%;
-        position: relative;
-        font-family: quicksand, arial, sans-serif; }
+        font-size: 1em; }
         .container .content #About .wrapper {
           width: 78%;
           max-width: 960px;
           margin: 0 auto;
           padding-top: 9%; }
         .container .content #About h1 {
-          font-family: quicksandLight;
-          color: #00b7ea;
-          font-size: 4.3em;
-          opacity: 0;
-          -webkit-animation: fadeIn 0.7s ease-in 1s forwards;
-          -o-animation: fadeIn 0.7s ease-in 1s forwards;
-          animation: fadeIn 0.7s ease-in 1s forwards; }
+          font-size: 4.3em; }
         .container .content #About h2 {
           font-family: quicksandLight;
           margin-top: 0.63em;
           margin-bottom: 1.3em;
-          color: #007FA2;
-          font-size: 1.6em;
-          opacity: 0;
-          -webkit-animation: fadeIn 0.7s ease-in 1.5s forwards;
-          -o-animation: fadeIn 0.7s ease-in 1.5s forwards;
-          animation: fadeIn 0.7s ease-in 1.5s forwards; }
+          font-size: 1.6em; }
         .container .content #About p {
           margin-top: 0.83em;
-          color: #007FA2;
+          font-size: 1em;
           opacity: 0; }
-          .container .content #About p strong {
-            font-family: quicksandBold; }
-        .container .content #About .description1 {
-          -webkit-animation: fadeIn 0.7s ease-in 2s forwards;
-          -o-animation: fadeIn 0.7s ease-in 2s forwards;
-          animation: fadeIn 0.7s ease-in 2s forwards; }
-        .container .content #About .description2 {
-          -webkit-animation: fadeIn 0.7s ease-in 2.2s forwards;
-          -o-animation: fadeIn 0.7s ease-in 2.2s forwards;
-          animation: fadeIn 0.7s ease-in 2.2s forwards; }
-        .container .content #About .description3 {
-          -webkit-animation: fadeIn 0.7s ease-in 2.4s forwards;
-          -o-animation: fadeIn 0.7s ease-in 2.4s forwards;
-          animation: fadeIn 0.7s ease-in 2.4s forwards; }
-        .container .content #About .description4 {
-          -webkit-animation: fadeIn 0.7s ease-in 2.6s forwards;
-          -o-animation: fadeIn 0.7s ease-in 2.6s forwards;
-          animation: fadeIn 0.7s ease-in 2.6s forwards; }
         .container .content #About .bouton {
           border: 1px solid #007FA2;
           border-radius: 5px;
           background: none;
           padding: 10px 19px;
-          font-family: quicksand, arial, sans-serif;
           font-size: 1em;
           margin: 30px auto;
           color: #007FA2;
           display: inline-block;
-          text-decoration: none;
-          position: relative;
-          overflow: hidden;
-          z-index: 5;
-          opacity: 0;
-          -webkit-animation: fadeIn 0.7s ease-in 3s forwards;
-          -o-animation: fadeIn 0.7s ease-in 3s forwards;
-          animation: fadeIn 0.7s ease-in 3s forwards; }
+          opacity: 0; }
           .container .content #About .bouton span {
             transition: all ease 0.3s;
             animation-delay: 1s; }
@@ -204,6 +557,7 @@
           animation: fadeIn 0.7s ease-in 1.5s forwards; }
         .container .content #Portfolio p {
           margin-top: 0.83em;
+          font-size: 1em;
           color: #007FA2;
           opacity: 1; }
           .container .content #Portfolio p strong {
@@ -215,7 +569,8 @@
           margin-bottom: 150px; }
           .container .content #Portfolio article .thumbs {
             float: right;
-            position: relative; }
+            position: relative;
+            width: auto; }
             .container .content #Portfolio article .thumbs img {
               transform: rotateY(-30deg) rotateX(10deg);
               transform-origin: left bottom;
@@ -257,126 +612,19 @@
           .container .content #Portfolio article .description {
             font-face: quicksand;
             color: #263143;
-            max-width: 35em; }
-      .container .content .bouton {
-        border: 1px solid #007FA2;
-        border-radius: 5px;
-        background: none;
-        padding: 10px 19px;
-        font-family: quicksand, arial, sans-serif;
-        font-size: 1em;
-        margin: 30px auto;
-        color: #007FA2;
-        display: inline-block;
-        text-decoration: none;
-        position: relative;
-        overflow: hidden;
-        z-index: 5;
-        opacity: 0;
-        -webkit-animation: fadeIn 0.7s ease-in 3s forwards;
-        -o-animation: fadeIn 0.7s ease-in 3s forwards;
-        animation: fadeIn 0.7s ease-in 3s forwards; }
-        .container .content .bouton span {
-          transition: all ease 0.3s;
-          animation-delay: 1s; }
-        .container .content .bouton:before {
-          background: #007FA2;
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          transition: all ease 0.3s;
-          -webkit-transform: translate3d(-20px, 0px, 0px) rotateZ(45deg);
-          transform: translate3d(0px, 100%, 0px) rotateZ(45deg);
-          transform-origin: top left;
-          z-index: -1; }
-        .container .content .bouton:hover {
-          color: #FFF; }
-          .container .content .bouton:hover:before {
-            -webkit-transform: translate3d(0px, 0px, 0px) rotateZ(0deg);
-            transform: translate3d(0px, 0px, 0px) rotateZ(0deg); }
-
-  .slide {
-    width: 100%;
+            max-width: 35em; } }
+@media only screen and (min-width: 992px) {
+  html, body {
     height: 100%; }
 
-  @keyframes rotateFall {
-    0% {
-      transform: rotateZ(0deg); }
-    20% {
-      transform: rotateZ(10deg);
-      animation-timing-function: ease-out; }
-    40% {
-      transform: rotateZ(17deg); }
-    60% {
-      transform: rotateZ(16deg); }
-    100% {
-      transform: translateY(100%) rotateZ(17deg); } }
-  /* slide in from the bottom */
-  @keyframes slideOutLeft {
-    to {
-      transform: translateX(-100%); } }
-  /* rotate out newspaper */
-  @keyframes rotateOutNewspaper {
-    to {
-      transform: translateZ(-3000px) rotateZ(360deg);
-      opacity: 0; } }
-  /* entering animations --------------------------------------- */
-  /* fadein */
-  @keyframes fadeIn {
-    from {
-      opacity: 0; }
-    to {
-      opacity: 1; } }
-  @keyframes fadeOut {
-    from {
-      opacity: 1; }
-    to {
-      opacity: 0; } }
-  /* slide in from the right */
-  @keyframes slideInRight {
-    from {
-      transform: translateX(100%); }
-    to {
-      transform: translateX(0); } }
-  /* slide in from the bottom */
-  @keyframes slideInUp {
-    from {
-      transform: translateY(100%); }
-    to {
-      transform: translateY(0); } }
-  .ng-enter {
-    z-index: 8888; }
+  .header {
+    width: 150px; }
+    .header .menu a {
+      color: #FFF; }
+      .header .menu a p {
+        line-height: 1.7em; }
 
-  .ng-leave {
-    z-index: 9999; }
-
-  /* page specific animations ------------------------ */
-  /* home -------------------------- */
-  .aboutanim.ng-enter {
-    animation: fadeIn 0.5s both ease-in;
-    animation-delay: 0.6s; }
-
-  .aboutanim.ng-leave {
-    animation: fadeOut 0.2s both ease-in;
-    animation-delay: 0s; }
-
-  /* about ------------------------ */
-  .portfolioanim.ng-enter {
-    animation: slideInRight 0.5s both ease-in;
-    animation-delay: 0.3s; }
-
-  .portfolioanim.ng-leave {
-    animation: slideOutLeft 0.5s both ease-in; }
-
-  /* contact ---------------------- */
-  .contactanim.ng-leave {
-    transform-origin: 50% 50%;
-    animation: rotateOutNewspaper .5s both ease-in; }
-
-  .contactanim.ng-enter {
-    animation: slideInUp 0.5s both ease-in; } }
+  .container .content {
+    padding-left: 150px; } }
 
 /*# sourceMappingURL=style.css.map */
