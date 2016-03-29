@@ -67,10 +67,10 @@ $delayOffset:0.2;
 // Custom, iPhone Retina
 @media only screen and (min-width : $mobile){
   body,html
-{
-  width:100%;
-  text-rendering: optimizeLegibility;
-}
+  {
+    width:100%;
+    text-rendering: optimizeLegibility;
+  }
   .full{
     height:100%;
     overflow:hidden;
@@ -393,6 +393,78 @@ $delayOffset:0.2;
           }
         }
       }
+
+      #Contact {
+        width: 100%;
+        min-height: 100%;
+        position: relative;
+        font-family: $primaryFont;
+
+        .wrapper {
+          width: 78%;
+          max-width: 960px;
+          margin: 0 auto;
+          padding-top: 9%;
+        }
+        .space{
+          height:50px;
+        }
+        h1 {
+          font-family: quicksandLight;
+          color: $titleColor;
+          font-size: $titleSize;
+          font-size: 3em;
+          opacity: 0;
+          -webkit-animation: fadeIn $fadeInTime ease-in 1s forwards;
+          -o-animation: fadeIn $fadeInTime ease-in 1s forwards;
+          animation: fadeIn $fadeInTime ease-in 1s forwards;
+        }
+        h2 {
+          font-family: quicksandLight;
+          margin-top: 0.63em;
+          margin-bottom: 1.3em;
+          color: $subtitleColor;
+          font-size: $subtitleSize;
+          opacity: 0;
+          -webkit-animation: fadeIn $fadeInTime ease-in 1.5s forwards;
+          -o-animation: fadeIn $fadeInTime ease-in 1.5s forwards;
+          animation: fadeIn $fadeInTime ease-in 1.5s forwards;
+        }
+        p {
+          margin-top: 0.83em;
+          font-size: $textSize;
+          color: $textColor;
+
+          opacity: 1;
+
+          strong {
+            font-family: quicksandBold;
+          }
+        }
+        .tag{
+          display:inline-block;
+          padding:0px 10px 15px 0;
+          text-decoration:none;
+          color:$primaryColor;
+          font-size:$textSize + 0.3em;
+          transition:color ease 500ms;
+
+          svg{
+            vertical-align:middle;
+            fill:$endGradientColor;
+            width:40px;
+            transition:fill ease 500ms;
+          }
+          &:hover{
+            color:$startGradientColor;
+
+            svg{
+              fill:$startGradientColor;
+            }
+          }
+        }
+      }
+
       .bouton{
         border: 1px solid $textColor;
         border-radius: 5px;

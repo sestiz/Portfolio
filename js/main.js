@@ -1,5 +1,5 @@
 // Setting angular for templating
-var app = angular.module("mainApp", ['ngRoute','ngAnimate']);
+var app = angular.module("mainApp", ['ngRoute','ngAnimate','ngSanitize']);
 app.config(function($routeProvider){
    $routeProvider.when('/', {
            templateUrl : 'views/about.html',
@@ -55,12 +55,12 @@ app.controller('portfolioController', function($scope){
                 { url:"images/portfolio/naughtyfactory-tablet.jpg", class:"tablet"},
                 { url:"images/portfolio/naughtyfactory-mobile.jpg", class:"mobile"}
             ],
-            overdescription:"Site à haut traffic créé avec la compagnie M2J Technologies.",
-            description:"Travaillant conjointement avec un développeur ASP.NET," +
-            "j'ai intégré le design d'un designer dans un site fait à partir de rien. " +
-            "J'ai programmé la structure HTML/CSS modulable ( en template )." +
-            "Programmation d'intéraction server-client en AJAX et JQuery" +
-            "Utilisation  du Framework UI Kendo UI®"
+            overdescription:"Site à haut traffic créé avec la compagnie M2J Technologies.<br>",
+            description:"Travaillant conjointement avec un développeur <strong>ASP.NET</strong><br>" +
+            "Intégration du design de site web<br>" +
+            "Programmation de la structure <strong>HTML/CSS</strong> modulable ( en template )." +
+            "Programmation d'intéraction server-client en <strong>AJAX</strong>,<strong>JSON</strong> et <strong>jQuery</strong><br>" +
+            "Utilisation  du Framework UI <strong>Kendo UI</strong>®<br>"
         },
         {
             titre: 'Production et Distribution Compagnie X',
@@ -77,13 +77,14 @@ app.controller('portfolioController', function($scope){
                 { url:"images/portfolio/naughtyfactory-mobile.jpg", class:"mobile"}
             ],
             overdescription:"Site web Wordpress ciblant les gens du domaine de la beauté",
-            description:"Création du design sur Wordpress," +
-            "Programmation des widgets"
+            description:"Prise en compte des demandes du client.<br>" +
+            "Création du design sur Wordpress.<br>" +
+            "Programmation des widgets.<br>"
         },
         {
             titre: 'Sondage Conseil Québecois du Commerce de Détail',
             class: 'cqcd',
-            url: 'sebastianpilon.com/projets/cqcd',
+            url: 'portfolio/cqcd',
             tags: [
                 { nom:'PHP'},
                 { nom:'MySQL'},
@@ -97,10 +98,10 @@ app.controller('portfolioController', function($scope){
                 { url:"images/portfolio/naughtyfactory-mobile.jpg", class:"mobile"}
             ],
             overdescription:"Sondage sur un site web 'responsive' avec collecte de données",
-            description:"Design du site web et intégration des éléments." +
-            "Conception responsive design pour cibler un maximum d'utilisateurs" +
-            "Programmation du côté serveur pour la collecte de données" +
-            "Gestion de la base de données MySQL pour sauvegarder les données collectées"
+            description:"Design du site web et intégration des éléments.<br>" +
+            "Conception responsive design pour cibler un maximum d'utilisateurs.<br>" +
+            "Programmation du côté serveur en <strong>PHP</strong> pour la collecte de données.<br>" +
+            "Gestion de la base de données <strong>MySQL</strong> pour sauvegarder les données collectées.<br>"
         }
     ]
 });

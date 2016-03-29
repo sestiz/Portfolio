@@ -35,6 +35,7 @@
     "jquery": "2.2.2",
     "angular-animate": "latest",
     "angular-route": "latest",
-    "bootstrap": "latest"
+    "bootstrap": "latest",
+    "angular-sanitize": "^1.5.3"
   }
 }

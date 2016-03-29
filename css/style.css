@@ -228,7 +228,7 @@
         opacity: 0;
         -webkit-animation: fadeIn 0.7s ease-in 2.4s forwards;
         -o-animation: fadeIn 0.7s ease-in 2.4s forwards;
-        animation: fadeIn 0.7s ease-in 1s forwards; }
+        animation: fadeIn 0.7s ease-in 2.4s forwards; }
       .container .content #Portfolio article .thumbs {
         position: relative;
         margin: 0 auto;
@@ -282,6 +282,60 @@
         font-face: quicksand;
         color: #263143;
         max-width: 35em; }
+  .container .content #Contact {
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    font-family: quicksand, arial, sans-serif; }
+    .container .content #Contact .wrapper {
+      width: 78%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding-top: 9%; }
+    .container .content #Contact .space {
+      height: 50px; }
+    .container .content #Contact h1 {
+      font-family: quicksandLight;
+      color: #00b7ea;
+      font-size: 4.3em;
+      font-size: 3em;
+      opacity: 0;
+      -webkit-animation: fadeIn 0.7s ease-in 1s forwards;
+      -o-animation: fadeIn 0.7s ease-in 1s forwards;
+      animation: fadeIn 0.7s ease-in 1s forwards; }
+    .container .content #Contact h2 {
+      font-family: quicksandLight;
+      margin-top: 0.63em;
+      margin-bottom: 1.3em;
+      color: #007FA2;
+      font-size: 1.6em;
+      opacity: 0;
+      -webkit-animation: fadeIn 0.7s ease-in 1.5s forwards;
+      -o-animation: fadeIn 0.7s ease-in 1.5s forwards;
+      animation: fadeIn 0.7s ease-in 1.5s forwards; }
+    .container .content #Contact p {
+      margin-top: 0.83em;
+      font-size: 1em;
+      color: #007FA2;
+      opacity: 1; }
+      .container .content #Contact p strong {
+        font-family: quicksandBold; }
+    .container .content #Contact .tag {
+      display: inline-block;
+      padding: 0px 10px 15px 0;
+      text-decoration: none;
+      color: #263143;
+      font-size: 1.3em;
+      transition: color ease 500ms; }
+      .container .content #Contact .tag svg {
+        vertical-align: middle;
+        fill: #00e5a0;
+        width: 40px;
+        transition: fill ease 500ms; }
+      .container .content #Contact .tag:hover {
+        color: #00b7ea; }
+        .container .content #Contact .tag:hover svg {
+          fill: #00b7ea; }
   .container .content .bouton {
     border: 1px solid #007FA2;
     border-radius: 5px;

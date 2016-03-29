@@ -8,7 +8,7 @@
     <p class="technologies">
         <span ng-repeat="tag in projet.tags">{{ tag.nom }}</span>
     </p>
-    <p class="description">
+    <p class="description" ng-bind-html="projet.description">
         {{ projet.description }}
     </p>
     <div style="clear: both"></div>
