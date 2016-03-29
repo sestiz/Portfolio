@@ -33,9 +33,14 @@ app.controller('portfolioController', function($scope){
         return 'views/projet.html';
     }
 
+    $scope.articleClass = function(projet){
+        return projet.class;
+    };
+
     $scope.projets = [
         {
             titre: 'Naughty Factory',
+            class: 'nf',
             url: 'http://www.naughtyfactory.com',
             tags: [
                 { nom:'Bootstrap'},
@@ -59,6 +64,7 @@ app.controller('portfolioController', function($scope){
         },
         {
             titre: 'Production et Distribution Compagnie X',
+            class: 'pdx',
             url: 'http://www.bellafd.com',
             tags: [
                 { nom:'Wordpress'},
@@ -76,6 +82,7 @@ app.controller('portfolioController', function($scope){
         },
         {
             titre: 'Sondage Conseil Québecois du Commerce de Détail',
+            class: 'cqcd',
             url: 'sebastianpilon.com/projets/cqcd',
             tags: [
                 { nom:'PHP'},

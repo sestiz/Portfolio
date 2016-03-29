@@ -1,0 +1,40 @@
+{
+  "name": "Portfolio Sebastian Pilon",
+  "homepage": "sebastianpilon.com",
+  "version": "0.1.0",
+  "authors": [
+    "Sebastian Pilon"
+  ],
+  "description": "Mon portfolio",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "portfolio",
+    "front-end",
+    "frontend",
+    "web",
+    "developer",
+    "web",
+    "developpeur",
+    "d9;78Rveloppeur",
+    "web"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.3",
+    "animate.css": "latest",
+    "skrollr": "latest",
+    "jquery": "2.2.2",
+    "angular-animate": "latest",
+    "angular-route": "latest",
+    "bootstrap": "latest"
+  }
+}
