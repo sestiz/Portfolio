@@ -1,0 +1,198 @@
+@charset "UTF-8";
+/* CSS Document */
+@font-face {
+    font-family: TradeGothic;
+    src: url(../_asset/fonts/TradeGothicLTStd.otf);
+}
+@font-face {
+	font-family: TradeGothicBold;
+	src: url(../_asset/fonts/TradeGothicLTStd-Bold.otf);
+}
+html{
+	height:100%;	
+}
+body{
+	margin:0;
+	paddin:0;
+	font-family:TradeGothic, Helvetica, sans-serif;
+	color:#717171;
+	height:100%;
+}
+#conteneur{
+	height: auto;
+	min-height: 100%;	
+}
+#contenuindexspace{
+	width:360px;
+	margin:0 auto;
+	padding-bottom:100px;
+	height:0px;
+}
+#contenuindex{
+	position:relative;
+	width:360px;
+	margin:0 auto;
+	padding-bottom:100px;
+	padding-top:10px;
+	height:300px;
+	background:#FFF;
+	-moz-box-shadow: 2px 2px 2px 1px #656565;
+	-webkit-box-shadow: 2px 2px 2px 1px #656565;
+	-o-box-shadow: 2px 2px 2px 1px #656565;
+	box-shadow: 2px 2px 2px 1px #656565;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=2);
+}
+	#contenuindex #titre{
+		margin:0 auto;	
+		background:url(../_asset/Header_titre.jpg) no-repeat;
+		width:330px;
+		height:109px;
+		margin-bottom:25px;
+	}
+	
+	.buttonmenu{		
+		width:295px;
+		height:40px;
+		display:block;
+		margin:0 auto;
+		margin-top:15px;
+	}	
+	.buttonmenu:hover{
+		-moz-box-shadow: 0px 0px 2px 1px #f56b00;
+		-webkit-box-shadow: 0px 0px 2px 1px #f56b00;
+		-o-box-shadow: 0px 0px 2px 1px #f56b00;
+		box-shadow: 0px 0px 2px 1px #f56b00;
+		filter:progid:DXImageTransform.Microsoft.Shadow(color=#f56b00, Direction=NaN, Strength=2);
+	}
+	#buttonindex1{background:url(../_asset/Button_Horaire.png);}
+	#buttonindex1:active{background:url(../_asset/Button_Horaire_active.png);-webkit-tap-highlight-color: rgba(0,0,0,0);}
+	#buttonindex2{background:url(../_asset/Button_Exposants.png);}
+	#buttonindex2:active{background:url(../_asset/Button_Exposants_active.png);-webkit-tap-highlight-color: rgba(0,0,0,0);}
+	#buttonindex3{background:url(../_asset/Button_Lieu.png);}
+	#buttonindex3:active{background:url(../_asset/Button_Lieu_active.png);-webkit-tap-highlight-color: rgba(0,0,0,0);}
+	#buttonindex4{background:url(../_asset/Button_Sondage.png);}
+	#buttonindex4:active{background:url(../_asset/Button_Sondage_active.png);-webkit-tap-highlight-color: rgba(0,0,0,0);}
+	#buttonindex5{background:url(../_asset/Button_ApprGenerale.png);}
+	#buttonindex5:active{background:url(../_asset/Button_ApprGenerale_active.png);-webkit-tap-highlight-color: rgba(0,0,0,0);}
+	#buttonindex6{background:url(../_asset/Button_Conferenciers.png);}
+	#buttonindex6:active{background:url(../_asset/Button_Conferenciers_active.png);-webkit-tap-highlight-color: rgba(0,0,0,0);}
+	#buttonindex7{background:url(../_asset/Button_Retour.png);}
+	#buttonindex7:active{background:url(../_asset/Button_Retour_active.png);-webkit-tap-highlight-color: rgba(0,0,0,0);}
+	
+#contenu{
+	width:360px;	
+	margin:0 auto;
+	padding-bottom:100px;
+}
+	.presentation{
+		padding-left:5px;	
+	}
+	p{
+		text-align:center;	
+		font-family:TradeGothicBold, Helvetica, sans-serif;
+		color:#717171;
+		font-size:1.1em;
+		margin:20px 0 0 0;
+	}
+	#header{
+		width:100%;
+		min-width:360px;
+		background:#FFF;
+	}
+		#logoCQCD{
+			width:110px;
+			height:78px;
+			margin:0 auto;
+			background:url(../_asset/Logo_CQCD.jpg) no-repeat;
+		}
+		#logoCQCDTitre{
+			width:339px;
+			height:27px;
+			margin:0 auto;
+			background:url(../_asset/Logo_CQCD_titre.jpg) no-repeat;
+		}
+		#patternTop{
+			width:100%;
+			height:23px;
+			margin:0 auto;
+			margin-top:10px;
+			background:url(../_asset/Top_Pattern_Barres.jpg) repeat-x;
+		}
+		
+	#liens{
+		width:100%;
+		text-align:center;
+	}
+		#liens input{
+			margin-left:15px;
+			margin-right:15px;
+			color:#717171;
+			font-size:1.1em;
+		}
+	.erreur{
+		color:#F00;
+		width:100%;
+		margin:0 auto;
+		font-size:8pt;
+		margin-top:10px;
+		font-style:italic;
+	}
+		
+	#footer{
+		/*width:100%;
+		position:absolute;
+		bottom:0;
+		height:55px;*/
+		 clear: both;
+		 position: relative;
+		 z-index: 10;
+		 height: 55px;
+		 margin-top: -55px;
+		 min-width:360px;
+	}
+		#groupeviva{
+			width:166px;
+			height:27px;
+			background:url(../_asset/Logo_Groupeviva.png) no-repeat right;
+			position:absolute;
+			right:0px;
+		}
+		#patternBottom{
+			background:url(../_asset/Bottom_Pattern%20Barres.jpg) repeat-x;
+			width:100%;
+			min-width:360px;
+			height:55px;
+			background-position:14px 0px;
+		}
+		#bump{
+			height:27px;	
+		}
+
+label{
+	padding-top:15px;
+	margin-left:85px;
+	min-width:240px;
+	
+	display:block;	
+}
+	label input{
+		margin-left:20px;
+		height:20px;
+		width:20px;	
+		font-family:TradeGothic, Helvetica, sans-serif;
+		color:#616161;
+	}
+textarea{
+	width:100%;
+	resize:none;
+	height:75px;
+	margin-top:20px;
+	margin-bottom:30px;
+}
+form{
+	width:300px;
+	margin:0 auto;
+}
+span{
+	font-weight:bold;	
+}

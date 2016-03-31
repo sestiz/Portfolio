@@ -55,7 +55,7 @@ app.controller('portfolioController', function($scope){
                 { url:"images/portfolio/naughtyfactory-tablet.jpg", class:"tablet"},
                 { url:"images/portfolio/naughtyfactory-mobile.jpg", class:"mobile"}
             ],
-            overdescription:"Site à haut traffic créé avec la compagnie M2J Technologies.<br>",
+            overdescription:"Site à haut traffic créé avec la compagnie M2J Technologies.",
             description:"Travaillant conjointement avec un développeur <strong>ASP.NET</strong><br>" +
             "Intégration du design de site web<br>" +
             "Programmation de la structure <strong>HTML/CSS</strong> modulable ( en template )." +
@@ -65,16 +65,17 @@ app.controller('portfolioController', function($scope){
         {
             titre: 'Production et Distribution Compagnie X',
             class: 'pdx',
-            url: 'http://www.bellafd.com',
+            //url: 'http://www.bellafd.com',
+            url: '#',
             tags: [
                 { nom:'Wordpress'},
                 { nom:'Design'},
                 { nom:'Responsive Design'}
             ],
             imagesUrl:[
-                { url:"images/portfolio/naughtyfactory-desktop.jpg", class:"desktop"},
-                { url:"images/portfolio/naughtyfactory-tablet.jpg", class:"tablet"},
-                { url:"images/portfolio/naughtyfactory-mobile.jpg", class:"mobile"}
+                { url:"images/portfolio/bella-desktop.jpg", class:"desktop"},
+                { url:"images/portfolio/bella-tablet.jpg", class:"tablet"},
+                { url:"images/portfolio/bella-mobile.jpg", class:"mobile"}
             ],
             overdescription:"Site web Wordpress ciblant les gens du domaine de la beauté",
             description:"Prise en compte des demandes du client.<br>" +
@@ -93,9 +94,9 @@ app.controller('portfolioController', function($scope){
                 { nom:'Responsive Design'}
             ],
             imagesUrl:[
-                { url:"images/portfolio/naughtyfactory-desktop.jpg", class:"desktop"},
-                { url:"images/portfolio/naughtyfactory-tablet.jpg", class:"tablet"},
-                { url:"images/portfolio/naughtyfactory-mobile.jpg", class:"mobile"}
+                { url:"images/portfolio/cqcd-desktop.jpg", class:"desktop"},
+                { url:"images/portfolio/cqcd-tablet.jpg", class:"tablet"},
+                { url:"images/portfolio/cqcd-mobile.jpg", class:"mobile"}
             ],
             overdescription:"Sondage sur un site web 'responsive' avec collecte de données",
             description:"Design du site web et intégration des éléments.<br>" +

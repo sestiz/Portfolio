@@ -313,6 +313,21 @@
       -webkit-animation: fadeIn 0.7s ease-in 1.5s forwards;
       -o-animation: fadeIn 0.7s ease-in 1.5s forwards;
       animation: fadeIn 0.7s ease-in 1.5s forwards; }
+    .container .content #Contact .courriel {
+      opacity: 0;
+      -webkit-animation: fadeIn 0.7s ease-in 1.8s forwards;
+      -o-animation: fadeIn 0.7s ease-in 1.8s forwards;
+      animation: fadeIn 0.7s ease-in 1.8s forwards; }
+    .container .content #Contact .linkedin {
+      opacity: 0;
+      -webkit-animation: fadeIn 0.7s ease-in 2s forwards;
+      -o-animation: fadeIn 0.7s ease-in 2s forwards;
+      animation: fadeIn 0.7s ease-in 2s forwards; }
+    .container .content #Contact .github {
+      opacity: 0;
+      -webkit-animation: fadeIn 0.7s ease-in 2.2s forwards;
+      -o-animation: fadeIn 0.7s ease-in 2.2s forwards;
+      animation: fadeIn 0.7s ease-in 2.2s forwards; }
     .container .content #Contact p {
       margin-top: 0.83em;
       font-size: 1em;
@@ -432,11 +447,12 @@
     animation-delay: 0.3s; }
   .container .content .portfolioanim.ng-leave {
     animation: slideOutLeft 0.5s both ease-in; }
-  .container .content .contactanim.ng-leave {
-    transform-origin: 50% 50%;
-    animation: rotateOutNewspaper .5s both ease-in; }
   .container .content .contactanim.ng-enter {
-    animation: slideInUp 0.5s both ease-in; }
+    animation: fadeIn 0.5s both ease-in;
+    animation-delay: 0.6s; }
+  .container .content .contactanim.ng-leave {
+    animation: fadeOut 0.2s both ease-in;
+    animation-delay: 0s; }
 
   .bouton {
     border: 1px solid #007FA2;

@@ -1,0 +1,101 @@
+[05-Mar-2013 13:57:43] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_sondage.inc.php on line 9
+[05-Mar-2013 13:58:03] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_sondage.inc.php on line 9
+[05-Mar-2013 13:58:04] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_sondage.inc.php on line 9
+[05-Mar-2013 13:58:13] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_sondage.inc.php on line 9
+[05-Mar-2013 13:58:13] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_sondage.inc.php on line 9
+[05-Mar-2013 13:58:13] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_sondage.inc.php on line 9
+[05-Mar-2013 13:59:29] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_sondage.inc.php on line 9
+[05-Mar-2013 13:59:51] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_sondage.inc.php on line 9
+[05-Mar-2013 14:00:51] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_sondage.inc.php on line 9
+[05-Mar-2013 14:01:08] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_sondage.inc.php on line 10
+[05-Mar-2013 14:12:29] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_sondage.inc.php on line 10
+[05-Mar-2013 14:15:20] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_sondage.inc.php on line 10
+[05-Mar-2013 15:58:58] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_sondage.inc.php on line 10
+[05-Mar-2013 15:59:00] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_sondage.inc.php on line 10
+[05-Mar-2013 16:33:24] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_sondage.inc.php on line 10
+[06-Mar-2013 08:19:11] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_sondage.inc.php on line 10
+[06-Mar-2013 08:19:12] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_sondage.inc.php on line 10
+[06-Mar-2013 08:19:12] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_sondage.inc.php on line 10
+[06-Mar-2013 08:19:12] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_sondage.inc.php on line 10
+[06-Mar-2013 08:19:24] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_sondage.inc.php on line 10
+[06-Mar-2013 08:19:25] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_sondage.inc.php on line 10
+[06-Mar-2013 08:26:07] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_sondage.inc.php on line 10
+[06-Mar-2013 08:26:08] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_sondage.inc.php on line 10
+[06-Mar-2013 08:26:14] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_sondage.inc.php on line 10
+[06-Mar-2013 08:26:15] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_sondage.inc.php on line 10
+[06-Mar-2013 08:35:02] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 63
+[06-Mar-2013 08:36:36] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 63
+[06-Mar-2013 08:37:06] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:37:07] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:37:20] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:37:21] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:37:27] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:37:29] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:49:44] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:49:53] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:49:54] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:49:54] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:49:54] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:50:00] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:50:01] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:50:02] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:50:03] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:50:03] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:50:03] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:50:03] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:50:03] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:50:05] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:50:05] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:50:05] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:50:05] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:50:05] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:50:05] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:50:06] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:50:06] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:50:06] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:50:06] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:50:06] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:50:06] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:50:06] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:50:09] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:50:09] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:51:05] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:51:05] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:51:05] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:51:13] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 65
+[06-Mar-2013 08:51:23] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 68
+[06-Mar-2013 08:52:48] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 68
+[06-Mar-2013 08:52:49] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 68
+[06-Mar-2013 08:52:51] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/groupev/public_html/cqcd/submit.php on line 68
+[06-Mar-2013 08:53:40] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/groupev/public_html/cqcd/submit.php:62) in /home/groupev/public_html/cqcd/submit.php on line 73
+[06-Mar-2013 09:06:06] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php on line 9
+[06-Mar-2013 09:21:14] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php on line 9
+[06-Mar-2013 09:38:53] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php on line 9
+[06-Mar-2013 14:40:22] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php on line 9
+[06-Mar-2013 14:40:31] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php on line 9
+[06-Mar-2013 14:40:31] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php:9) in /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php on line 87
+[06-Mar-2013 14:40:35] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php on line 9
+[06-Mar-2013 14:40:39] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php on line 9
+[06-Mar-2013 14:40:39] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php:9) in /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php on line 87
+[06-Mar-2013 14:40:45] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php on line 9
+[06-Mar-2013 14:40:50] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php on line 9
+[06-Mar-2013 14:40:50] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php:9) in /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php on line 87
+[06-Mar-2013 14:40:52] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php on line 9
+[06-Mar-2013 14:43:47] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php on line 9
+[06-Mar-2013 14:43:47] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php:9) in /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php on line 87
+[06-Mar-2013 14:43:53] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php on line 9
+[06-Mar-2013 14:43:57] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php on line 9
+[06-Mar-2013 14:43:57] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php:9) in /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php on line 87
+[06-Mar-2013 14:44:39] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php on line 9
+[06-Mar-2013 14:44:46] PHP Warning:  Wrong parameter count for strstr() in /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php on line 9
+[06-Mar-2013 14:44:46] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php:9) in /home/groupev/public_html/cqcd/gestion_conferenciers.inc.php on line 87
+[07-Mar-2013 15:07:42] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/groupev/public_html/cqcd/c05.php:21) in /home/groupev/public_html/cqcd/c05.php on line 57
+[07-Mar-2013 15:09:03] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/groupev/public_html/cqcd/c05.php:21) in /home/groupev/public_html/cqcd/c05.php on line 57
+[07-Mar-2013 15:09:04] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/groupev/public_html/cqcd/c05.php:21) in /home/groupev/public_html/cqcd/c05.php on line 57
+[07-Mar-2013 15:09:28] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'groupev'@'localhost' (using password: NO) in /home/groupev/public_html/cqcd/cmerci.php on line 10
+[07-Mar-2013 15:09:28] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/groupev/public_html/cqcd/cmerci.php on line 10
+[07-Mar-2013 15:18:26] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/groupev/public_html/cqcd/c07.php:15) in /home/groupev/public_html/cqcd/c07.php on line 32
+[07-Mar-2013 15:18:55] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/groupev/public_html/cqcd/c07.php:15) in /home/groupev/public_html/cqcd/c07.php on line 32
+[07-Mar-2013 15:25:44] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/groupev/public_html/cqcd/c07.php:15) in /home/groupev/public_html/cqcd/c07.php on line 32
+[07-Mar-2013 15:33:35] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/groupev/public_html/cqcd/c07.php:15) in /home/groupev/public_html/cqcd/c07.php on line 24
+[07-Mar-2013 15:34:50] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/groupev/public_html/cqcd/c07.php:15) in /home/groupev/public_html/cqcd/c07.php on line 24
