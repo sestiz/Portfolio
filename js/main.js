@@ -140,14 +140,6 @@ $(function(){
         }else{
             $menu.show();
         }
-    })
-
-    // Init the scrolling lib
-    var scroller = skrollr.init({
-        edgeStrategy: 'set',
-        documentElement : "skrollrBody",
-        skrollrBody:'skrollrBody',
-        forceHeight:false
     });
 
     // Add animation when mouseover menu buttons

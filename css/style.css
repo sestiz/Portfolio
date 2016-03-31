@@ -391,8 +391,7 @@
         -webkit-transform: translate3d(0px, 0px, 0px) rotateZ(0deg);
         transform: translate3d(0px, 0px, 0px) rotateZ(0deg); }
   .container .content .slide {
-    width: 100%;
-    height: 100%; }
+    width: 100%; }
   @keyframes rotateFall {
     0% {
       transform: rotateZ(0deg); }
@@ -561,6 +560,8 @@
       height: 100%;
       display: block;
       box-sizing: border-box; }
+      .container .content .slide {
+        height: 100%; }
       .container .content #About {
         width: 100%;
         font-size: 1em; }
